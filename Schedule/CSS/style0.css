@@ -1,0 +1,15 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;        /* 去掉列表前面的小点 */
+}
+
+a {
+    display: inline-block;   
+    text-decoration: none;   /* 去掉超链接下划线 */
+    color: black;
+}
