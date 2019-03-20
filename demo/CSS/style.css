@@ -1,0 +1,338 @@
+/* reset */
+a {
+  display: block;
+  width: 100%;
+  height: inherit;
+  text-decoration: none;              /*去除a标签下划线 */
+  color: black;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;                   /*去除ul>li前面的黑点 */
+}
+li {
+  width: 6%;
+  padding-right: 15px;
+}
+img {
+  padding-right: 7px;
+}
+
+/* head */
+.header {
+  height: 56px;
+  width: 100%;
+  border-bottom: 0.3px solid rgba(100, 100, 100, 0.5);
+}
+.header .home {
+  width: 7%;
+  margin-left: 3%;
+  float: left;
+}
+.header .home img {
+  width: 100%;
+  height: 100%;
+}
+.header .level-1 {
+  height: 40px;
+  width: 90%;
+  padding-top: 8px;
+  display: flex;                         /* 将ul的所有li横向排列 */
+  font-size: 17px;
+  line-height: 56px;
+}
+.header ul li,
+.header ul a {
+  line-height: 40px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.second {
+  width: 8%;
+}
+.header ul .divide {
+  padding-left: 32%;
+}
+.header ul .divide a {
+  font-size: 12px;
+}
+.header ul .active {
+  padding-left: 10%;
+}
+.header ul .active img {
+  height: 21px;
+}
+.header ul .active a{
+  width: 54px;
+  color: #ea6f5a;
+}
+#download {
+  width: 25px;
+}
+.header .search {
+  width: 160px;
+}
+.header form {
+  position: absolute;
+  padding: 0 40px 0 20px;
+  width: 220px;
+  height: 38px;
+  font-size: 14px;
+  border: 1px solid #eee;
+  border-radius: 40px;
+  background: #eee;
+}
+.header input {
+  position: absolute;
+  left: 20px;
+  height: 36px;
+  padding: 0;
+  background-color: inherit;
+  border: none;
+  border: 1px;
+  outline: none;                              /* 消除input框点击后出现的蓝色边框 */
+  
+}
+.touch {
+  width: 3%;
+}
+.touch a{
+  color: #969696;
+}
+.same {
+  position: absolute;
+  height: 35px;
+  width: 45px;
+  border-radius: 25px;
+}
+.sign {
+  left: 82%;
+  width: 4%;
+  border: #ea6f5a 1px solid;
+}
+.sign a{
+  position: absolute;
+  left: 50%;
+  margin-left: -17px;
+  color: #ea6f5a;
+  font-size: 16px;
+}
+.towrite {
+  left: 88%;
+  width: 5%;
+  background-color: #ea6f5a;
+  border: 2px solid #ea6f5a;
+}
+.towrite a {
+  position: absolute;
+  left: 50%;
+  margin-left: -20px;
+  color: white;
+}
+
+/* 轮播图 */
+section {
+  width: 62%;
+  margin: 0 auto;
+}
+section .left {
+  float: left;
+  width: 70%;
+  padding-top: 40px;
+}
+section .left .rollpic{
+  position: relative;
+  width: 625px;
+  height: 270px;
+}
+.rollpic #img-ul li {
+  width: 100%;
+  height: 100%;
+}
+.rollpic #img-ul li a {
+  width: 100%;
+  height: 100%;
+}
+section .left .rollpic img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border-radius: 12px;
+}
+.btn {
+  position: relative;
+  width: 625px;
+}
+.btn a {
+  position: absolute;
+  top: 110px;                                      /* 定位于.left，picture的height是270，设置height为 270/2 - 25 (自己高度的一半)，即可垂直居中 */
+  width: 40px;
+  height: 50px;
+  display: none;
+  font-size: 22px;
+  text-align: center;
+  line-height: 45px;
+  color: #fff;
+  background-color: rgba(0,0,0,0.4);
+}
+.prev {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.next {
+  right: 0;                                            
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;           
+}
+.rollpic:hover .show {
+  display: block;
+}
+.tab {
+  position: absolute;
+  top: 100%; 
+  left: 50%;       
+  width: 175px;
+  height: 20px;                       
+  margin-top: -20px;;                                        
+  margin-left: -90px;                                /* margin-left设置为一半宽的负数使之水平居中 */
+}
+.tab-ul {
+  width: 175px;
+  display: flex;
+}
+.tab-li {
+  padding: 0;
+  margin: 3px 5px;
+  width: 30px;
+  height: 3px;
+  background-color: rgba(0,0,0,0.4);
+  border-radius: 5px;
+}
+.tab-on {
+  background-color: #fff;
+}
+/* 右栏布局 */
+
+.right {
+  position: relative;
+  width: 30%;
+  padding-top: 40px;
+  float: left;
+}
+.wrapper {
+  width: 100%;
+}
+.wrapper ul,
+.wrapper li,
+.wrapper img {
+  padding: 0;
+  margin: 0;
+}
+.wrapper ul {
+  width: 100%;
+}
+.wrapper li {
+  width: 100%;
+}
+.wrapper li a {
+  width: 100%;
+}
+.wrapper li a img {
+  width: 100%;
+}
+.degree {
+  margin-top: 10px;
+  padding: 10px 22px;
+  width: 84%;
+  height: 60px;
+  border: 0.5px solid #eee;
+  border-radius: 5px;
+}
+.Dcode {
+  float: left;
+  width: 60px;
+  height: 60px;
+}
+.degree .title {
+  margin-top: 10px;
+}
+.degree div {
+  margin-left: 75px;
+}
+.degree .description {
+  margin-top: 10px;
+  color: #969696;
+  font-size: 13px;
+}
+.append {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  display: none;
+  margin-left: -90px;
+  width: 180px;
+  height: 180px;
+  background-color: #fff;
+  border: #969696 0.5px solid;
+  border-radius: 5px;
+}
+.append img {
+  margin: 10px;
+  width: 160px;
+  height: 160px;
+}
+a.degree:hover+.append {
+  display: block;
+}
+/* 瀑布流li的布局 */
+.news {
+  width: 90%;
+  margin-top: 40px;
+  border-top: 1px solid #eee;
+}
+.news ul {
+  width: 100%;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+.news ul li {
+  position: relative;
+  width: 100%;
+  height: 104px;
+  padding: 25px 0 20px 2px;
+  
+}
+.news .title {
+  height: auto;
+  font-size: 20px;
+  color: #333;
+}
+.news ul li img {
+  position: absolute;
+  right: 0;
+  top: 25px;
+  width: 148px;
+  padding: 0;
+  border-radius: 5px;
+}
+.news .abstract {
+  font-size: 13px;
+  color: #969696;
+}
+.details {
+  width: 140px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #969696;
+}
+.details a {
+  width: auto;
+  color: #969696;
+}
+.details .active {
+  color: #ea6f5a;
+}
