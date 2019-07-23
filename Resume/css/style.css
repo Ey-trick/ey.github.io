@@ -37,7 +37,7 @@ li {
   height: 1.5em;
   border-right: 1px solid  rgb(33, 68, 134);
   color: rgb(33, 68, 134);
-  font-size: 1.5em;
+  font-size: 24px;
 }
 .up {
   position: absolute;
@@ -46,7 +46,7 @@ li {
   width: 140px;
   height: 15px;
   color: rgb(33, 68, 134);
-  font-size: 0.5em;
+  font-size: 9px;
 }
 .down {
   position: absolute;
@@ -55,7 +55,6 @@ li {
   width: 140px;
   height: 20px;
   color: rgb(33, 68, 134);
-  font-size: 1em;
 }
 .divide {
   position: absolute;
@@ -131,7 +130,7 @@ li {
   position: absolute;
   top: 10px;
   left: 10px;
-  font-size: 1.2em;
+  font-size: 18px;
 }
 .huge .summa {
   position: absolute;
@@ -139,7 +138,7 @@ li {
   left: 10px;
   width: 200px;
   border-bottom: 1px solid rgba(214, 169, 72, 0.8); 
-  font-size: 0.6em;
+  font-size: 9px;
 }
 .huge .personal {
   position: absolute;
@@ -147,7 +146,7 @@ li {
   left: 10px;
 }
 .huge .personal li {
-  font-size: 0.75em;
+  font-size: 12px;
 }
 .personal .f2 {
   float: left;
@@ -168,7 +167,7 @@ li {
   display: flex;
 }
 .huge li {
-  font-size: 0.6em;
+  font-size: 9px;
 }
 .huge .f1 {
   margin-left: 10px;
@@ -202,7 +201,7 @@ li {
 .infor .level-4 .huge .text {
   margin-top: 10px;
   margin-left: 10px;
-  font-size: 0.7em;
+  font-size: 11px;
 }
 .photo {
   position: absolute;
