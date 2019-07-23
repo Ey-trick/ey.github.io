@@ -93,7 +93,7 @@ li {
 }
 .infor .level-1 {
   position: relative;
-  height: 280px;
+  height: 255px;
 }
 .tip {
   height: 23px;
@@ -118,7 +118,7 @@ li {
 .huge {
   margin-left: 10px;
   width: 90%;
-  height: 280px;
+  height: 235px;
   border-top: 1px solid rgba(128, 128, 128, 0.432);
   border-left: 1px solid rgb(33, 68, 134);
 }
@@ -168,7 +168,7 @@ li {
 }
 .infor .level-3 {
   width: 100%;
-  height: 540px;
+  height: 520px;
 }
 .infor .level-3 .summa {
   top: 10px;
@@ -180,7 +180,7 @@ li {
   margin: 10px 0 0 10px;
 }
 .infor .level-3 .huge {
-  height: 520px;
+  height: 500px;
 } 
 .infor .level-4 {
   width: 100%;
