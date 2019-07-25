@@ -20,7 +20,7 @@ li {
 #container {
   margin: 0 auto;
   width: 375px;
-  height: 1140px;
+  height: 1055px;
   border: 1px solid rgba(128, 128, 128, 0.5);
 }
 .title { /* title */
@@ -47,7 +47,7 @@ li {
   width: 180px;
   height: 15px;
   color: rgb(33, 68, 134);
-  font-size: 9px;
+  font-size: 12px;
 }
 .down {
   margin-left: 5px;
@@ -93,7 +93,7 @@ li {
 }
 .infor .level-1 {
   position: relative;
-  height: 255px;
+  height: 240px;
 }
 .tip {
   height: 23px;
@@ -132,7 +132,7 @@ li {
   margin-left: 10px;
   width: 200px;
   border-bottom: 1px solid rgba(214, 169, 72, 0.8); 
-  font-size: 9px;
+  font-size: 12px;
 }
 .huge .personal {
   margin-top: 10px;
@@ -160,7 +160,7 @@ li {
   display: flex;
 }
 .huge li {
-  font-size: 9px;
+  font-size: 12px;
 }
 .huge .f1 {
   margin-left: 10px;
@@ -168,7 +168,7 @@ li {
 }
 .infor .level-3 {
   width: 100%;
-  height: 520px;
+  height: 500px;
 }
 .infor .level-3 .summa {
   top: 10px;
@@ -180,18 +180,18 @@ li {
   margin: 10px 0 0 10px;
 }
 .infor .level-3 .huge {
-  height: 500px;
+  height: 480px;
 } 
 .infor .level-4 {
   width: 100%;
 }
 .infor .level-4 .huge {
-  height: 100px;
+  height: 110px;
 }
 .infor .level-4 .huge .text {
   margin-top: 10px;
   margin-left: 10px;
-  font-size: 11px;
+  font-size: 12px;
 }
 .photo {
   position: absolute;
