@@ -55,7 +55,6 @@ window.onload = function(){
       "begin" : 8,
       "finish" : 14,
       "despite" : 10,
-      "despite_2" : 13
     },
     {
       "lesson" : "解剖实验",
@@ -185,7 +184,7 @@ window.onload = function(){
         return;
       }
     }
-    if(week >= classes[lessonIndex].begin && week <= classes[lessonIndex].finish && week != holiday && week != classes[lessonIndex].despite && week != classes[lessonIndex].despite_2){
+    if(week >= classes[lessonIndex].begin && week <= classes[lessonIndex].finish && week != holiday && week != classes[lessonIndex].despite){
       display(needIt,lessonIndex);
     }
   }
