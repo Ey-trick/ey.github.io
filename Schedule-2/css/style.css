@@ -1,0 +1,135 @@
+/* reset */
+html,body {
+  margin: 0;
+  padding: 0;
+}
+div {
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  height: 21px;
+  text-align: center;
+  padding: 10px 0;
+  list-style: none;
+  border: 1px solid #ccc;
+}
+/* main */
+.container {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+/* 1.header */
+.header {
+  position: relative;
+}
+.header #left {
+  position: absolute;
+  height: 60%;
+  font-size: 50px;
+  color: #ccc;
+  cursor: pointer;
+}
+.header #right {
+  position: absolute;
+  right: 0;
+  height: 60%;
+  font-size: 50px;
+  color: #ccc;
+  cursor: pointer;
+}
+.jump {
+  text-align: center;
+  font-size: 50px;
+  color: rgba(175, 47, 47, 0.5);
+}
+.jump input {
+  width: 125px;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 30px;
+  color: rgba(175, 47, 47, 0.5);
+  padding: 16px 0 16px 60px;
+}
+.jump sup {
+  margin-right: 60px;
+}
+.title {
+  display: flex;
+}
+.title div {
+  padding: 10px;
+  font-size: 24px;
+  text-align: center;
+  color: #888;
+}
+.title #week {
+  width: 30%;
+  border: 1px solid #eee;
+}
+.title #title {
+  width: 70%;
+  border: 1px solid #eee;
+}
+/* 2.content */
+.week {
+  display: flex;
+  border: 1px solid #eee;
+}
+.week .left {
+  display: flex;
+  width: 30%;
+}
+.week .left .day {
+  width: 60%;
+  text-align: center;
+  line-height: 320px;
+  font-size: 25px;
+  border: 1px solid #eee;
+}
+.week .left .time {
+  width: 40%;
+}
+.week .left .time li{
+  color: #aaa;
+}
+.divide {
+  margin-top: 15px;
+}
+.week .right {
+  width: 70%;
+}
+.week .right>ul>li {
+  color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  cursor: pointer;
+}
+.week .right .level-1 {
+  width: 25%;
+  display: none;
+}
+.week .right .level-1 li {
+  margin-top: -31px;
+  color: white;
+  background-color: rgba(175, 47, 47, 0.5);
+}
+.week .right>ul>li:hover .level-1 {
+  display: block;
+}
+.weekend {
+  height: 200px;
+}
+.weekend .enday {
+  width: 60%;
+  text-align: center;
+  line-height: 200px;
+  font-size: 25px;
+  color: #888;
+  border: 1px solid #eee;
+}
