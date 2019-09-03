@@ -74,6 +74,36 @@ window.onload = function(){
       "despite" : 14
     }
   ]
+  let exams = [
+    {
+      "lesson" : "分子生物学 Exam",
+      "place" : ""
+    },
+    {
+      "lesson" : "药学基础 Exam",
+      "place" : ""
+    },
+    {
+      "lesson" : "生物信息资源实践 Exam",
+      "place" : ""
+    },
+    {
+      "lesson" : "解剖生理学 Exam",
+      "place" : ""
+    },
+    { 
+      "lesson" : "生物统计学 Exam",
+      "place" : ""
+    },
+    {
+      "lesson" : "遗传学 Exam",
+      "place" : ""
+    },
+    {
+      "lesson" : "系统生物学 Exam",
+      "place" : ""
+    }
+  ]
   const holiday = 5;
   // 星期模块存储数组-->storage
   let storage = document.querySelectorAll(".right");
@@ -154,11 +184,26 @@ window.onload = function(){
     //  分子实验
     showExperinment(6,0,10,13);
     showExperinment(6,1,10,13);
+    // 考试
+    //  药学基础
+    exam(13,3,2,1);
+    //  遗传学
+    exam(14,2,4,5);
+    //  分子
+    exam(18,0,2,0);
+    //  生物统计
+    exam(18,3,2,4);
+    //  生信实践
+    exam(18,4,2,2);
+    //  系统生物学
+    exam(18,6,2,6);
+    //  解剖
+    exam(19,1,2,3);
   }
   // 显示课程函数
-  function display(dom,lessonIndex){
-    dom.innerHTML = classes[lessonIndex].lesson;
-    createInit(dom,classes[lessonIndex].place);
+  function display(dom,lessonIndex,item){
+    dom.innerHTML = item[lessonIndex].lesson;
+    createInit(dom,item[lessonIndex].place);
   }
   // 隐藏课程函数
   function hidden(dom){
@@ -185,14 +230,14 @@ window.onload = function(){
       }
     }
     if(week >= classes[lessonIndex].begin && week <= classes[lessonIndex].finish && week != holiday && week != classes[lessonIndex].despite){
-      display(needIt,lessonIndex);
+      display(needIt,lessonIndex,classes);
     }
   }
   // 实验、地点显示函数
   function showExperinment(dayIndex,rank,lessonIndex,week1){
     let needIt = storage[dayIndex].querySelectorAll(".course")[rank];
     if(week == week1){
-      display(needIt,lessonIndex);
+      display(needIt,lessonIndex,classes);
     }
   }
   //重置页面
@@ -204,6 +249,13 @@ window.onload = function(){
           hidden(courses[j]);
         }
       }
+    }
+  }
+  //考试显示函数
+  function exam(weekIndex,dayIndex,timeIndex,lessonIndex){
+    let needIt = storage[dayIndex].querySelectorAll(".course")[timeIndex];
+    if(week == weekIndex){
+      display(needIt,lessonIndex,exams);
     }
   }
 
