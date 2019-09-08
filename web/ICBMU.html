@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>5th ICBMU</title>
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_1382865_4a583izjw0j.css">
+  <style>
+    /* reset */
+    body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+    form,fieldset,input,textarea,p,blockquote,th,td {
+      padding: 0;
+      margin: 0;
+    }
+    body {
+      font-size: 18px;
+      background: url("./img/bg.png");
+    }
+    p{
+      padding-right: 10px;
+    }
+    ol,ul {
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+    }
+    i {
+      margin-right: 10px;
+    }
+    .clear {
+      clear: both;
+    }
+    h1,h2,h3,h4,h5,h6 {
+      font-weight: normal;
+      font-size: 100%;
+    }
+    /* main */
+    body {
+      margin-bottom: 20px;
+    }
+    #wrapper {
+      width: 1024px;
+      height: auto;
+      background-color: #fff;
+      margin: 0 auto;
+      z-index: 10;
+      -webkit-box-shadow: 0px 0px 6px #aaa;
+      -moz-box-shadow: 0px 0px 6px #aaa;
+      box-shadow: 0px 0px 6px #aaa;
+    }
+    #header{
+      margin: 0 auto;
+    }
+    #main{
+      width: 1024px;
+      margin: 0 auto;
+    }
+    /* head */
+    .top_bg {
+      width: 1024px;
+      height: 85px;
+      margin: 0 auto;
+    }
+    .top_bg a {
+      float: left;
+      margin: auto 10px;
+    }
+    .top_bg .conf_title {
+      padding-left: 264px;
+      padding-top: 15px;
+    }
+    .top_bg .conf_title h1 {
+      font-size: 28px;
+      font-weight: 300;
+      color: #1e64c8;
+      line-height: 1.2;
+      letter-spacing: -.02em;
+    }
+    .top_bg .conf_title h1 span {
+      color: #455A64;
+      font-weight: 200;
+    }
+    /* body */
+    .main_left {
+      width: 250px;
+      float: left;
+    }
+    .main_right .cover {
+      width: 740px;
+      height: 231px;
+      position: relative;
+    }
+    .main_right .cover:after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      box-shadow:0 0 50px 30px #ffffff inset;
+    }
+    .main_left ul a {
+      width: 230px;
+      height: 32px;
+      color: white;
+      display: inline-block;
+      line-height: 32px;
+      padding: 3px 0 3px 20px;
+      background-color: #1e64c8;
+    }
+    .main_left ul a:hover {
+      color: black;
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+    .main_left .dates {
+      margin-top: 30px;
+    }
+    .main_left .dates h3,h6,h4 {
+      padding-left: 20px;
+    }
+    .main_left .dates h3.title{
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+      font-size: 20px;
+      font-weight: 300;
+    }
+    .main_left .dates h4{
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 1.6;
+    }
+    .main_left .dates hr{
+      background: url("./img/divide.png") no-repeat;
+      border: medium none;
+      height: 19px;
+      margin: 10px 0 10px;
+    }
+    .main_left .dates img {
+      margin-left:20px;
+    }
+    .main_right {
+      width: 760px;
+      float: right;
+    }
+    .main_right .conf_content {
+      padding-top: 28px;
+      padding-right: 4px;
+      text-align: justify;
+      line-height: 150%;
+    }
+    .main_right .contact {
+      margin: 20px 4px 30px 0;
+    }
+    .main_right .contact h3 {
+      font-size: 22px;
+      margin-bottom: 5px;
+      color: #4e5b70;
+      letter-spacing: -.03em;
+    }
+    .main_right .contact .contact_info {
+      padding-right: 4px;
+    }
+    .main_right h2 {
+      border-top: 1px solid #CFD8DC;
+      padding-top: 20px;
+      font-size: 28px;
+      color: #1e64c8;
+      font-weight: 300;
+      letter-spacing: -.02em;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <!-- head -->
+    <div id="header">
+      <div class="top_bg">
+        <!-- 这里放主页网址 图片 -->
+        <a href="http://www.hust.edu.cn/" target="_blank"><img src="./img/logo_school.png" alt="" style="height: 80px;margin-left: 15px;"></a>
+        <a href="http://life.hust.edu.cn/" target="_blank"><img src="./img/logo_college.png" alt="" style="height: 80px;"></a>
+        <div class="conf_title">
+          <h1>
+            Welcome to 5th ICBMU | Wuhan, China<br>
+            <span>November 7-9, 2019</span>
+          </h1>
+        </div>
+      </div>
+    </div>
+    <!-- main -->
+    <div id="main">
+      <!-- left guid -->
+      <div class="main_left">
+        <ul class="button_list">
+          <li><a href="#"><i class="iconfont icon-jurassic_home"></i>Home</a></li>
+          <li><a href="#"><i class="iconfont icon-renwuqingdan"></i>Call for papers</a></li>
+          <li><a href="#"><i class="iconfont icon-jurassic_users1"></i>Committee</a></li>
+          <li><a href="#"><i class="iconfont icon-jurassic_hat"></i>Keynote Speakers</a></li>
+          <li><a href="#"><i class="iconfont icon-chayuericheng"></i>Important Dates</a></li>
+          <li><a href="#"><i class="iconfont icon-upload"></i>Paper Submission</a></li>
+          <li><a href="#"><i class="iconfont icon-jurassic_warn"></i>Registration</a></li>
+          <li><a href="#"><i class="iconfont icon-nishizhencounterclockwise6"></i>Conference Program</a></li>
+          <li><a href="#"><i class="iconfont icon-icon_location"></i>Conference Venue</a></li>
+          <li><a href="#"><i class="iconfont icon-school"></i>University & College</a></li>
+          <li><a href="#"><i class="iconfont icon-City"></i>Wuhan City</a></li>
+          <li><a href="#"><i class="iconfont icon-jurassic_message"></i>Contact Us</a></li>
+        </ul>
+        <!-- date on the left -->
+        <div class="dates">
+          <h3 class="title"><i class="iconfont icon-chayuericheng"></i> Important Dates</h3>
+          <h6>Submission Deadline</h6>
+          <h4>September 15, 2019</h4>
+          <hr>
+          <h6>Acceptance decision</h6>
+          <h4>October 1, 2019</h4>
+          <hr>
+          <h6>Registration Deadline</h6>
+          <h4>October 31, 2019</h4>
+          <hr>
+          <h6>Conference Date</h6>
+          <h4>November 7-9, 2019</h4>
+          <hr>
+        </div>
+        <div class="dates">
+          <h3 class="title"><i class="iconfont icon-download"></i> Download</h3>
+          <h6>Paper Template (<a href=" " style="color:#dc3c00;font-weight:600;">Download</a>)</h6>
+        </div>
+        <div class="dates">
+          <h3 class="title" style="font-weight:400;">Organized by</h3>
+          <!-- 这里放 承办方 网址 和 图片 -->
+          <a href="http://www.hust.edu.cn/" target="_blank"><img src="./img/logo_school.png" alt="" style="height: 80px;margin-left: 15px;"></a>
+          <a href="http://life.hust.edu.cn/" target="_blank"><img src="./img/logo_college.png" alt="" style="height: 80px;"></a>
+        </div>
+        <div class="dates">
+          <h3 class="title" style="font-weight:400;">Sponsored by</h3>
+          <!-- 这里放 赞助商 网址 和 图片 -->
+          <a href=" " target="_blank"><img src=" "></a> 
+        </div>
+      </div>
+      
+
+
+
+
+      <!-- Home -->
+      <div class="main_right">
+        <!-- 这里放主页大图的图片地址 -->
+				<img src=" " alt="">
+				<div class="conf_content">
+					<div style="text-align: justify;">
+            <strong>The 5th International Conference on Bio-Medical Ultrasound (5th ICBMU)</strong> 
+            <strong>[第五届生物医学超声国际学术会议]</strong> organized by
+            <strong>Huazhong University of Science and Technology (HUST)</strong>
+            will be held on 
+            <strong>November 7-9, 2019</strong> in 
+            <strong>Wuhan, China</strong>. It is co-organized by Chinese Association of Ultrasound in Medicine and Engineering and Hubei Province Association of Bio-medical Engineering. 
+          </div>
+          <div style="text-align: justify;">	&nbsp;</div>
+          <div style="text-align: justify;">
+            Ultrasound is one of most active areas in medicine and biology, specially in clinic. It is the most often used medical equipment in the world and attracted for intensive attentions both in techniques and applications. ICBMU2019 will provide an interdisciplinary form on bio-medical ultrasound for the engineers, researchers and physicians. The topic of ICBMU2019 is 
+            <strong>THE NEW TECHNIQUES IN BIO-MEDICAL ULTRASOUND IMAGING AND NEW APPLICATIONS</strong>.
+            In addition, artificial intelligence in medicine is another hot topic that many attendances may be interested in. <br>	&nbsp;
+          </div>
+          <div style="text-align: justify;">
+            We are looking forward to meeting you in the very beautiful city Wuhan, China, during November 7-9, 2019. Definitely, 5th ICBMU will provide you a pleasant experience, new contacts and happy stay in Wuhan.<br>
+	          <br>
+	          <u>
+              <a href="http://life.hust.edu.cn/info/1025/8826.htm" target="_blank">
+                <span style="color:#ff0000;">
+                  5th ICBMU is listed in College of Life Science and Technology, Huazhong University of Science and Technology (HUST), China!
+                </span>
+              </a>
+            </u><br>
+	          <u>
+              <a href="http://life.hust.edu.cn/info/1025/8826.htm" target="_blank">
+                <span style="color:#ff0000;">
+                  该会议资讯已发布在华中科技大学生命科学与技术学院官网！
+                </span>
+              </a>
+            </u><br>
+	          <br>
+            <span style="font-family: verdana, geneva, sans-serif; font-size: 22px; color: rgb(78, 91, 112); letter-spacing: -0.03em;">
+              Call for paper &amp; Submission Guides
+            </span>
+            <br>
+            This conference will provide an excellent opportunity for everyone involved to learn and discuss about BIO-MEDICAL ULTRASOUND IMAGING AND NEW APPLICATIONS.<br>
+            Topics of interest for submission include, but are not limited to:<br>
+            BIO-MEDICAL ULTRASOUND IMAGING AND NEW APPLICATIONS<br>
+            <a href="#" class="jump_0">
+              <span style="color:#ff0000;">More Topics...</span>
+            </a><br>
+	          <br>
+            All submitted articles should report original, previously unpublished research results, experimental or theoretical. Articles submitted to the conference should meet these criteria and must not be under consideration for publication elsewhere. Manuscripts should follow the style of the conference and are subject to both review and editing.&nbsp;Submitted papers will be peer-reviewed by technical program committees based on the paper's topic, quality, etc.<br>
+            For more details about paper submission, 
+            <a href="#" class="jump_1">
+              <span style="color:#ff0000;">please click</span>
+            </a>!<br>
+	          <br>
+          </div>
+        </div>
+				<div class="contact">
+					<h3>Contact Information</h3>
+					<div class="contact_info">
+						<p dir="ltr" style="padding: 0px; margin: 0px; font-size: 14px; color: rgb(17, 17, 17);text-align: left;">
+              <span style="font-family: 'trebuchet ms', helvetica, sans-serif;">
+                <b>Conference Secretary</b>
+              </span><br>
+              <span style="font-family: 'trebuchet ms', helvetica, sans-serif;">
+                <b>Ms.</b>
+              </span>
+              <span style="font-family: 'trebuchet ms', helvetica, sans-serif;">
+                <b>&nbsp;</b>
+              </span>
+              <span style="font-family: 'trebuchet ms', helvetica, sans-serif;">
+                <b>Li</b>
+              </span><br>
+              <span style="font-family: 'trebuchet ms', helvetica, sans-serif;">
+                <span style="font-size: 12.6px;">Email:&nbsp;</span>
+                <strong style="text-align: justify; background: transparent; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline;">
+                  <a href="mailto:ICRICAI@126.com" style="text-decoration-line: none; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent; color: blue; line-height: 26px;">grace@hust.edu.cn</a>
+                </strong>
+              </span><br>
+              <span style="font-size: 12.6px;">QQ</span>
+              <span style="font-family: 'trebuchet ms', helvetica, sans-serif; font-size: 12.6px; text-align: justify;">:&nbsp;</span>
+              <span style="font-family: 'trebuchet ms', helvetica, sans-serif; text-align: justify;">286792205</span><br>
+              <span style="font-family: 'trebuchet ms', helvetica, sans-serif; text-align: justify;">Tel:&nbsp; +86-13667122851</span>
+              <span style="font-family: 'trebuchet ms', helvetica, sans-serif; text-align: justify;">&nbsp;(WeChat)</span>
+            </p>
+            <p dir="ltr" style="padding: 0px; margin: 0px; font-size: 14px; color: rgb(17, 17, 17);text-align: left;">
+              <span style="font-family: 'trebuchet ms', helvetica, sans-serif;">
+                <span lang="EN-US">Please feel free to contact us by phone during 9 am—5:30 pm in the working day or contact us by email.</span>
+              </span>
+            </p>
+					</div>
+        </div>
+      </div>
+
+      <!-- Call for papers-->
+      <div class="main_right">
+      	<h2>Call for papers</h2>
+		    <div class="conf_content">
+          <div style="text-align: justify;">
+              The 5th International Conference on Bio-Medical Ultrasound (5th ICBMU) organized by Huazhong University of Science and Technology (HUST) will be held on November 7-9, 2019 in Wuhan, China. It is co-organized by Chinese Association of Ultrasound in Medicine and Engineering and Hubei Province Association of Bio-medical Engineering. 
+              Ultrasound is one of most active areas in medicine and biology, specially in clinic. It is the most often used medical equipment in the world and attracted for intensive attentions both in techniques and applications. ICBMU2019 will provide an interdisciplinary form on bio-medical ultrasound for the engineers, researchers and physicians. The topic of ICBMU2019 is THE NEW TECHNIQUES IN BIO-MEDICAL ULTRASOUND IMAGING AND NEW APPLICATIONS. In addition, artificial intelligence in medicine is another hot topic that many attendances may be interested in.               
+          </div>
+          <br>
+          <strong>Topics of interest for submission include, but are not limited to:</strong><br>
+          THE NEW TECHNIQUES IN BIO-MEDICAL ULTRASOUND IMAGING AND NEW APPLICATIONS<br>
+		    </div>
+      </div>
+    
+      <!-- Committee -->
+      <div class="main_right">
+      	<h2>Committee</h2>
+		    <div class="conf_content">
+          <div class="cover">
+            <img src="./img/committee.png" alt="" style="width: 740px;display: block;margin-bottom: 20px;">
+          </div>
+          <br>
+          <strong>Conference chairs</strong><br>
+            Prof.James Greenleaf<br>
+            Mayo Clinic, USA<br>
+            James Greenleaf，梅奥医学中心<br>
+            <br>
+            Prof.Mingyue Ding<br>
+            College of Life Science and Technology, Huazhong University of Science and Technology, China<br>
+            丁明跃，华中科技大学生命科学与技术学院<br>
+            <br>
+            Prof.Pai-chi Li<br>
+            National Taiwan University, Taiwan<br>
+            李百祺, 国立台湾大学<br>
+            <br>
+            <strong>Program chairs</strong><br>
+            Prof.Aaron Fenster<br>
+            The University of Western Ontario，Canada<br>
+            Aaron Fenster，韦仕敦大学<br>
+            <br>
+            Prof.Mengxing Tang<br>
+            Imperial College London, UK<br>
+            Mengxing Tang，帝国理工学院<br>
+            <br>
+            <strong>Members</strong><br>
+            Prof. James Greenleaf, Mayo Clinic, USA<br>
+            Prof. Mingyue Ding, Huazhong University of Science and Technology, China<br>
+            Prof. Pai-chi Li, National Taiwan University, Taiwan<br>
+            Prof. Aaron Fenster，Western University, Canada<br>
+            Prof. Mengxing Tang, Imperial College London, UK<br>
+            Prof. Alfred C. H. Yu University of Waterloo，Canada<br>
+            Prof. Xiaoming Zhang, Mayo Clinic, USA<br>
+            Prof. Gregory Clement, Food and Drug Administration, USA<br>
+            Assoc.Prof. Oliver Kripfgans, University of Michigan，USA<br>
+            Prof. Yong-ping Zheng，The Hong Kong Polytechnic University, Hong Kong, China<br>
+            Prof. Siping Chen, Shenzhen University, China<br>
+            Prof. Xiang Zhou, United Imaging Healthcare Co. , China<br>
+            Prof. Lei Sun, The Hong Kong Polytechnic University, Hong Kong, China<br>
+            Prof. Anhua Li, Cancer Hospital, Sun Yat-sen University Zhongshan School of Medicine, China<br>
+            Prof. Xiantao Shen, Wuhan Children Hospital, Huazhong University of Science and Technology, China<br>
+            Prof. Hairong Zheng, Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences, China<br>
+            Prof. Yuanyi Zheng,  6th People’s Hospital of Shanghai, China<br>
+            Prof. Cai Chang, Cancer Center of Fudan University，China<br>
+            Prof. Jianwen Luo, Qinghua University, China<br>
+            Prof. Mingxi Wan, Xian Jiaotong University, China<br>
+            Prof. Qinghua Huang, Northwestern Polytechnical University, China<br>
+            Prof. Dean Ta, Fudan University, China<br>
+            Prof. Dong Zhang, Nanjing University, China<br>
+            Prof. Ming Yuchi, Huazhong University of Science and Technology, China.<br>
+            Prof. Lei Zhu, Shenzhen Mindary Bio-Medical Electronics Co.，Ltd， China<br>
+            Prof. Yaoyao Cui, Suzhou Institute of Biomedical Engineering and Technology, Chinese Academy of Sciences, China<br>
+            Prof. Weibao Qiu, Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences, China<br>
+		    </div>
+      </div>
+
+      <!-- Keynote Speakers -->
+      <div class="main_right">
+      	<h2>Keynote Speakers</h2>
+		    <div class="conf_content">
+          Prof.Mingyue Ding<br>
+          College of Life Science and Technology, Huazhong University of Science and Technology, China<br>
+          丁明跃（教授），华中科技大学生命科学与技术学院<br>
+          Title: Coming soon......<br>
+          Abstract: Coming soon......<br>
+          <br>
+          <br>
+          Prof.Pai-chi Li<br>
+          National Taiwan University, Taiwan<br>
+          李百祺（教授）, 国立台湾大学<br>
+          Title: Coming soon......<br>
+          Abstract: Coming soon......<br>
+          <br>
+          <br>
+          Prof.Aaron Fenster<br>
+          The University of Western Ontario，Canada<br>
+          Aaron Fenster（教授），韦仕敦大学<br>
+          Title: Coming soon......<br>
+          Abstract: Coming soon......<br>
+          <br>
+          <br>
+          Prof.Mengxing Tang<br>
+          Imperial College London, UK<br>
+          Mengxing Tang（教授），帝国理工学院<br>
+          Title: Coming soon......<br>
+          Abstract: Coming soon......<br>
+          <br>
+          <br>
+          Prof.Yong-ping Zheng<br>
+          The Hong Kong Polytechnic University, Hong Kong, China<br>
+          郑永平（教授）， 香港理工大学<br>
+          Title: Coming soon......<br>
+          Abstract: Coming soon......<br>
+          <br>
+          <br>          
+          Prof.Xiang Zhou<br>
+          United Imaging Healthcare Co. , China<br>
+          周翔（教授）, 联影医疗,<br>
+          Title: Coming soon......<br>
+          Abstract: Coming soon......<br>
+          <br>
+          <br>
+          Prof.Anhua Li<br>
+          Cancer Hospital, Sun Yat-sen University Zhongshan School of Medicine, China<br>
+          李安华（教授），中山大学中山医学院附属肿瘤医院<br>
+          Title: Coming soon......<br>
+          Abstract: Coming soon......<br>
+          <br>
+          <br>
+          Prof.Xiantao Shen<br>
+          Wuhan Children Hospital, Huazhong University of Science and Technology, China<br>
+          沈先涛（教授），华中科技大学附属武汉儿童医院<br>
+          Title: Coming soon......<br>
+          Abstract: Coming soon......<br>
+          <br>
+          <br>
+          Prof.Hairong Zheng<br>
+          Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences, China<br>
+          郑海容（教授），中国科学院深圳先进技术研究所<br>
+          Title: Coming soon......<br>
+          Abstract: Coming soon......<br>
+          <br>
+          <br>
+          Prof.Jianwen Luo<br>
+          Qinghua University, China<br>
+          罗建文（教授），清华大学<br>
+          Title: Coming soon......<br>
+          Abstract: Coming soon......<br>
+          <br>
+          <br>          
+          Prof.Mingxi Wan<br>
+          Xian Jiaotong University, China<br>
+          万明晰（教授），西安交通大学<br>
+          Title: Coming soon......<br>
+          Abstract: Coming soon......<br>
+          <br>
+          <br>          
+          Prof.Qinghua Huang<br>
+          Northwestern Polytechnical University, China<br>
+          黄清华（教授），西北工业大学<br>
+          Title: Coming soon......<br>
+          Abstract: Coming soon......<br>
+          <br>
+          <br>          
+          Prof.Dean Ta<br>
+          Fudan University, China<br>
+          他得安（教授），复旦大学<br>
+          Title: Coming soon......<br>
+          Abstract: Coming soon......<br>
+          <br>
+          <br>
+          Prof.Dong Zhang<br>
+          Nanjing University, China<br>
+          张东（教授），南京大学<br>
+          Title: Coming soon......<br>
+          Abstract: Coming soon......<br>
+          <br>
+          <br>
+          Prof.Lei Zhu<br>
+          Shenzhen Mindary Bio-Medical Electronics Co.，Ltd， China<br>
+          朱磊（教授），深圳迈迪生物医疗电子有限公司<br>
+          Title: Coming soon......<br>
+          Abstract: Coming soon......<br>
+          <br>
+          <br>
+          Prof.Yaoyao Cui<br>
+          Suzhou Institute of Biomedical Engineering and Technology, Chinese Academy of Sciences, China<br>
+          崔瑶瑶（教授），中国科学院苏州生物医学工程技术研究所<br>
+          Title: Coming soon......<br>
+          Abstract: Coming soon......<br>
+          <br>
+          <br>
+          Prof.Weibao Qiu<br>
+          Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences, China<br>
+          邱伟宝（教授），中国科学院先进技术研究所<br>
+          Title: Coming soon......<br>
+          Abstract: Coming soon......<br>
+          <br>
+          <br>
+		    </div>
+      </div>
+
+      <!-- Important Dates --> 
+      <div class="main_right">
+      	<h2>Important Dates</h2>
+		    <div class="conf_content" style="width: 450px;float: left;">
+          <span style="color: rgb(0, 0, 0); text-align: justify; font-family: tahoma, geneva, sans-serif;">Paper submission deadline:&nbsp;</span>
+          <span style="color: rgb(255, 0, 0);text-align: justify; font-family: tahoma, geneva, sans-serif;">September 15, 2019</span>
+          <br>
+          <br>
+          <span style="color: rgb(0, 0, 0); text-align: justify; font-family: tahoma, geneva, sans-serif;">Acceptance decision:&nbsp;</span>
+          <span style="color: rgb(255, 0, 0); text-align: justify; font-family: tahoma, geneva, sans-serif;">October 1, 2019</span>
+          <br>
+          <br>
+          <span style="color: rgb(0, 0, 0); text-align: justify; font-family: tahoma, geneva, sans-serif;">Registration Deadline:&nbsp;</span>
+          <span style="color: rgb(255, 0, 0); text-align: justify; font-family: tahoma, geneva, sans-serif;">October 31, 2019</span>
+          <br>
+          <br>
+          <span style="color: rgb(0, 0, 0); text-align: justify; font-family: tahoma, geneva, sans-serif;">Conference Date:&nbsp;</span>
+          <span style="color: rgb(255, 0, 0);text-align: justify; font-family: tahoma, geneva, sans-serif;">November 7-9, 2019</span>
+        </div>
+        <img src="./img/date.png" alt="" style="width: 240px;">
+      </div>  
+      
+      <!-- Paper Submission -->
+      <div class="main_right">
+          <h2>Paper Submission</h2>
+          <div class="conf_content">
+            <div style="text-align: justify;">
+              <strong>English is the official language of the conference.</strong> 
+              We welcome paper submissions. Prospective authors are invited to submit full (and original research) papers (which is NOT submitted or published or under consideration anywhere in other conferences/journal).<br>
+              <br>
+              (1) The attendances who interested to join the conference submit one page abstract to Professor Yuchi Ming with the following email address: m.yuchi@hust.edu.cn.
+            </div>
+            <br>
+            * The author is suggested to use the 5th ICBMU 
+            <u>
+              <strong>
+                <a href="http://ic-ricai.org/uploads/soft/Template.docx">
+                  <span style="color:#ff0000;">Paper Template</span>
+                </a>
+              </strong>
+            </u>.<br>
+            * A regular submission must be no more than half page.<br>
+            <br>
+            <br>
+            <strong>Notes</strong><br>
+            <br>
+            <div style="text-align: justify;">
+              <strong>As Author</strong>
+              , you can deliver paper presentation on 5th ICBMU, orally or poster presentation. You must submit abstract for review before the submission deadline.
+            </div>
+            <div style="text-align: justify;">
+              Conference package (all conference tracks, morning, and afternoon tea, lunch and dinner); Conference materials; 15 Minutes presentation time
+            </div>
+            作者身份参会： 审稿后文章被5th ICBMU录用，并在会议现场发表演讲，口头报告和海报报告展示均可接受。请投稿摘要。<br>
+            <div style="text-align: justify;">
+              <br>
+              <strong>As Invited Speaker</strong>
+              , you can deliver a oral presentation on 5th ICBMU. Abstract&nbsp; is necessary to submit.
+            </div>
+            <div style="text-align: justify;">
+              Conference package (all conference tracks, morning, and afternoon tea, lunch and dinner); Conference materials; 15 Minutes presentation time;
+            </div>
+            特邀报告身份参会： 在5th ICBMU会议上进行口头报告。请投稿摘要。<br>
+            <div style="text-align: justify;">
+              <br>
+              <strong>As Listener</strong>
+              , you can participate and attend all the presentation sessions only, neither making presentation nor having paper published.
+            </div>
+            <div style="text-align: justify;">
+              Conference package (all conference tracks, morning, and afternoon tea, lunch and dinner); Conference materials;
+            </div>
+            听众身份参会： 出席并参加5th ICBMU, 并可全程旁听会议所有展示报告。<br>
+            <br>
+          </div>
+        </div>
+
+        <!-- Registration -->
+        <div class="main_right">
+            <h2>Registration</h2>
+            <div class="conf_content">
+              <table cellspacing="1" class="auto-style1" height="246" style="text-align:center; margin: 0px -1px 24px 0px; padding: 0px; border-width: 1px 0px 0px 1px; border-top-style: solid; border-right-style: initial; border-bottom-style: initial; border-left-style: solid; border-top-color: rgb(238, 238, 238); border-right-color: initial; border-bottom-color: initial; border-left-color: rgb(238, 238, 238); border-image: initial; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline; border-spacing: 0px;" width="100%">
+                <tbody style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">
+                  <tr style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">
+                    <th height="2" rowspan="2" scope="col" style="margin: 0px; padding: 9px 24px; border-width: 0px 1px 1px 0px; border-top-style: initial; border-right-style: solid; border-bottom-style: solid; border-left-style: initial; border-top-color: initial; border-right-color: rgb(238, 238, 238); border-bottom-color: rgb(238, 238, 238); border-left-color: initial; border-image: initial; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: 18px; font-family: inherit; vertical-align: baseline; text-align: center; background: #AADDFF; width: 300px;" valign="top">
+                      <span style="font-size:14px;">Items</span></th>
+                    <th colspan="2" scope="col" style="margin: 0px; padding: 9px 24px; border-width: 0px 1px 1px 0px; border-top-style: initial; border-right-style: solid; border-bottom-style: solid; border-left-style: initial; border-top-color: initial; border-right-color: rgb(238, 238, 238); border-bottom-color: rgb(238, 238, 238); border-left-color: initial; border-image: initial; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: 18px; font-family: inherit; vertical-align: baseline; text-align: center; background: #AADDFF;" valign="bottom" width="460">
+                      <span style="font-size:14px;">Registration Fee</span></th>
+                  </tr>
+                  <tr style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">
+                    <th scope="col" style="margin: 0px; padding: 9px 24px; border-width: 0px 1px 1px 0px; border-top-style: initial; border-right-style: solid; border-bottom-style: solid; border-left-style: initial; border-top-color: initial; border-right-color: rgb(238, 238, 238); border-bottom-color: rgb(238, 238, 238); border-left-color: initial; border-image: initial; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: 18px; font-family: inherit; vertical-align: baseline; text-align: center; background: #AADDFF;" valign="bottom" width="230">
+                      <span style="font-size:14px;">人民币 RMB/Yuan</span></th>
+                    <th scope="col" style="margin: 0px; padding: 9px 24px; border-width: 0px 1px 1px 0px; border-top-style: initial; border-right-style: solid; border-bottom-style: solid; border-left-style: initial; border-top-color: initial; border-right-color: rgb(238, 238, 238); border-bottom-color: rgb(238, 238, 238); border-left-color: initial; border-image: initial; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: 18px; font-family: inherit; vertical-align: baseline; text-align: center; background: #AADDFF;" valign="bottom" width="230">
+                      <span style="font-size:14px;">By US Dollar</span></th>
+                  </tr>
+                  <tr style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline;">
+                    <th scope="row" style="margin: 0px; padding: 9px 24px; border-width: 0px 1px 1px 0px; border-top-style: initial; border-right-style: solid; border-bottom-style: solid; border-left-style: initial; border-top-color: initial; border-right-color: rgb(238, 238, 238); border-bottom-color: rgb(238, 238, 238); border-left-color: initial; border-image: initial; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: 18px; font-family: inherit; vertical-align: baseline; text-align: left; background: rgb(249, 249, 249); width: 300px;">
+                      <span style="font-size:14px;">Author (Regular)</span></th>
+                    <td style="margin: 0px; padding: 6px 24px; border-width: 0px 1px 1px 0px; border-top-style: initial; border-right-style: solid; border-bottom-style: solid; border-left-style: initial; border-top-color: initial; border-right-color: rgb(238, 238, 238); border-bottom-color: rgb(238, 238, 238); border-left-color: initial; border-image: initial; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline; text-align: center;" width="230">
+                      <span style="font-size:14px;">1000 RMB</span></td>
+                    <td style="margin: 0px; padding: 6px 24px; border-width: 0px 1px 1px 0px; border-top-style: initial; border-right-style: solid; border-bottom-style: solid; border-left-style: initial; border-top-color: initial; border-right-color: rgb(238, 238, 238); border-bottom-color: rgb(238, 238, 238); border-left-color: initial; border-image: initial; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline; text-align: center;" width="230">
+                      <span style="font-size:14px;">140 USD</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row" style="margin: 0px; padding: 9px 24px; border-width: 0px 1px 1px 0px; border-top-style: initial; border-right-style: solid; border-bottom-style: solid; border-left-style: initial; border-top-color: initial; border-right-color: rgb(238, 238, 238); border-bottom-color: rgb(238, 238, 238); border-left-color: initial; border-image: initial; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: 18px; font-family: inherit; vertical-align: baseline; text-align: left; background: rgb(249, 249, 249);">
+                      <span style="font-size:14px;">Author (Student,Committees)</span></th>
+                    <td style="margin: 0px; padding: 6px 24px; border-width: 0px 1px 1px 0px; border-top-style: initial; border-right-style: solid; border-bottom-style: solid; border-left-style: initial; border-top-color: initial; border-right-color: rgb(238, 238, 238); border-bottom-color: rgb(238, 238, 238); border-left-color: initial; border-image: initial; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline; text-align: center;">
+                      <span style="font-size:14px;">600 RMB</span></td>
+                    <td style="margin: 0px; padding: 6px 24px; border-width: 0px 1px 1px 0px; border-top-style: initial; border-right-style: solid; border-bottom-style: solid; border-left-style: initial; border-top-color: initial; border-right-color: rgb(238, 238, 238); border-bottom-color: rgb(238, 238, 238); border-left-color: initial; border-image: initial; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline; text-align: center;">
+                      <span style="font-size:14px;">84 USD</span></td>
+                  </tr>
+                </tbody>
+              </table>
+              <br>
+              Notes<br>
+              <br>
+              1) Regular Registration: Submit a full paper to publish and present at the conference.<br>
+              2) Student author: Provide a valid certificate from their departments (only for the first author).<br>
+            </div>
+          </div>
+
+          <!-- Conference Program -->
+          <div class="main_right">
+              <h2>Conference Program</h2>
+              <div class="conf_content">
+                <div style="text-align: justify;">
+                  <br>
+                  <p style="margin-left: 50px;">Coming soon...</p>
+                  <br>
+                <!-- <strong>For Your Convenience, A Simple Version Of Schedule Is Given Below.</strong><br>
+                <br>
+                <strong>September 20, 2019 | Day 1</strong><br>
+                <br>
+                13:00-18:00 Registration,collecting conference materials.<br>
+                The first day is all about registration, participants are supposed to sign in at the conference venue and collect all the conference materiails at the registration counter on this day. However, the registration is still open on the 2nd day of the conference.<br>
+                <br>
+                <strong>September 21, 2019 | Day 2</strong><br>
+                <br>
+                09:00-12:00 Keynote Speeches<br>
+                The conference chair will be hosting a opening ceremony in the morning, and all the participants are supposed to be there, then the keynote speakers will deliver their spectacular speeches and share their cutting-edge research fruits with the participants. During the intermission, there will be a photo session for all the participants to take a group photo.<br>
+                12:00-13:30 Lunch Time<br>
+                Afternoon from 13:30 / Author Presentation&nbsp; (Parallel Sessions)<br>
+                Evening / Dinner Time<br>
+                <br>
+                <strong>September 22, 2019 | Day 3</strong><br>
+                <br>
+                09:00-12:00 Author Presentation (Parallel Sessions)<br>
+                12:00-13:30 Lunch Time<br>
+                Afternoon from 13:30 / Lab visiting (Pending)<br>
+                Evening / Dinner Time<br>
+                <br>
+                <br>
+                <strong>Instructions for Oral Presentations</strong><br>
+                <br>
+                <strong>Devices Provided by the Conference Organizer:</strong><br>
+                Computer<br>
+                Digital Projectors and Screen<br>
+                Laser Sticks<br>
+                <br>
+                <strong>Materials Provided by the Presenters:</strong><br>
+                PowerPoint or PDF Files (Files should be copied to the Conference laptop at the beginning of each Session.)<br>
+                <br>
+                <strong>Duration of each Presentation (Tentatively):</strong><br>
+                Regular Oral Presentation: about 12 Minutes of Presentation and 3 Minutes of Question and Answer<br>
+                Keynote Speech: about 35 Minutes of Presentation and 5 Minutes of Question and Answer<br>
+                <br>
+                <strong>Instructions for Poster Presentation</strong><br>
+                <br>
+                <strong>Materials Provided by the Conference Organizer:</strong><br>
+                The place to put poster<br>
+                <br>
+                <strong>Materials Provided by the Presenters:</strong><br>
+                Home-made Posters<br>
+                Maximum poster size is A1-->
+              </div>      
+              </div>
+            </div>
+
+            <!-- Conference Venue -->
+            <div class="main_right">
+                <h2>Conference Venue</h2>
+                <div class="conf_content">
+                  <span style="color:#0000cd;"><strong>1) Conference Venue</strong></span><br>
+                  <br>
+                  <span>Coming soon...</span>
+                  <br>
+                  <div style="text-align: justify;">
+                  <!--  <br>
+                    The 2019 International Conference on Robotics, Intelligent Control and Artificial Intelligence (RICAI 2019) will be held at <strong>Shanghai University of Engineering Science(Songjiang Campus)</strong>.<strong>[上海工程技术大学(松江校区)]</strong><br>
+                    <br>
+                    <strong>Address:</strong> 333 Long Teng Road, Songjiang District, Shanghai, China<br>
+                    <br>
+                    <strong>Direction:</strong><br>
+                    * Shanghai Hongqiao International Airport: 31km; 40min;<br>
+                    * Songjiang South Railway Station: 10km; 20min;<br>-->
+                    <br> 
+                    <span style="color:#0000cd;"><strong>2) Information of Hotel</strong></span><br>
+                    <br>
+                    <img src="./img/hotel0.jpg" alt="" style="width: 275px; height: 300px;">
+                    <img src="./img/hall0.jpg" alt="" style="width: 475px; height: 300px;">
+                    <strong>* Optics Valley Zmax International Hotel [光谷潮漫凯瑞国际酒店]</strong></div>
+                  <div style="text-align: justify;">
+                    <br>
+                    <strong>Hotel Address:</strong> 408 New Avenue, Development Zone, Wuhan, Hubei Province, China<br>
+                    <br>
+                    <strong>Direction:</strong> (By Taxi)<br>
+                    * Tianhe Airport: 60min;<br>
+                    * Wuhan Railway Station: 25min;<br>
+                    * Wuchang Railway Station: 25min;<br>
+                    * Hankou Railway Station: 40min;<br>
+                    * Hhuazhong University of Science and Technology: 11min;<br>
+                    <br>
+                    Standard Room<br>
+                    &nbsp; RMB 349/night(about USD 49/night). (One beds, Internet and two breakfast included)<br>
+                    &nbsp; RMB 349/night(about USD 49/night). (Two beds, Internet and two breakfast included)<br>
+                    Single Room<br>
+                    &nbsp; RMB 349/night(about USD 49/night). (One beds, Internet and two breakfast included)<br>
+                    &nbsp; RMB 349/night(about USD 49/night). (Two beds, Internet and two breakfast included)<br>
+                    <br>
+                    <strong>Hotel Reservation</strong><br>
+                    Please sent us booking receipt to the Email Address <span style="color:#0000ff;">ICRICAI@126.com</span> before <span style="color:#ff0000;">September 4, 2019</span> if you want to reserve the room.<br>
+                    Booking Receipt(Only English): <u><a href="http://ic-ricai.org/uploads/soft/Hotel_Reservation_Form.xls"><span style="color:#0000ff;">Download</span></a></u><br>
+                    <br>
+                    如需组委会代为预定酒店，请务必在<span style="color:#ff0000;">9月4日</span>前发送预订回执至组委会指定邮箱<span style="color:#0000ff;">ICRICAI@126.com</span><br>
+                    预定回执表（中文）：<u><a href="http://ic-ricai.org/uploads/soft/Hotel_Reservation_Form_CN.xls"><span style="color:#0000ff;">点击下载</span></a></u><br>
+                    <br>
+                    <br>
+                    <br>
+                    &nbsp;</div>        
+                </div>
+              </div>
+
+              <!-- University and College -->
+              <div class="main_right">
+                <h2>University and College</h2>
+                <div class="conf_content">
+                  <h3 style="text-align: center; color: #1e64c8;">University</h3>
+                  <br>
+                  <p> &nbsp;&nbsp;&nbsp;<strong>The Huazhong University of Science and Technology </strong> (HUST) is a national key university directly under the administration of the Ministry of Education of P. R. China, and is among the first Universities joining the national “211 Project” and “985 Project”. It was founded on May 26th, 2000 as a result of the merger of the former Huazhong University of Science and Technology, Tongji Medical University and Wuhan Urban Construction Institute.</p>
+                  <p> &nbsp;&nbsp;&nbsp;HUST covers an area of over 1,153 acres with picturesque environment, elegant surroundings and has 72% greenery coverage, which has been honored as the “University in the Forest”. It offers its students and staff first-class logistic service, efficient network service and abundant library resources. </p>
+                  <p> &nbsp;&nbsp;&nbsp;HUST is a comprehensive and multi-disciplinary research university, covering 12 major disciplines: philosophy, economics, law, education, literature, history, engineering, agriculture, medicine, management and arts, offering a variety of degree programs, including 94 undergraduate programs, 225 master programs, and 184 PhD programs. There are 39 post-doctoral research centers, 7 national key first-level disciplines and 15 national key sub-disciplines. Three disciplines namely, Mechanical Engineering, Optical Engineering, and Public Health and Preventive Medicine ranks top 1 among its peers in China, while Electrical Engineering and Biomedical Engineering ranks 2nd and 3rd respectively. HUST also hosts various national advanced talent training bases for undergraduate education, including the “National Exemplary Software Faculty”, the “National Base of Life Science and Technological Talents”, the “National Base of IC Talents”, the “National Education Base of Basic Science Courses”, and the “School of Engineering Sciences”. </p>
+                  <br>
+                  <img src="./img/university.png" alt="" style="width: 740px;">
+                  <br>
+                  <br>
+                  <p> &nbsp;&nbsp;&nbsp;HUST hosts around 3000 full-time faculty members, more than 900 of which are professors and 1300 associate professors. A large number of eminent scientists and professors are gathering here, including 15 academicians of the Chinese Academy of Science and the Chinese Academy of Engineering, 36 Thousand Talents Program members, 5 The One-Thousand Foreign Experts Program members, 52 The Thousand Talents Program for Distinguished Young Scholars members, 48 Changjiang Scholars Program for Distinguished Professors, 36 Changjiang Scholars Program for Visiting Professors, 56 winners of The National Science Fund for Distinguished Young Scholars, 15 Chief Scientists for 973 Program, 2 Chief Scientists for Key Research Programs, 3 Young Chief Scientists for 973 program, 27 winners of Research Fund for Distinguished Young Scientists, 224 winners of Program for New Century Excellent Talents in University, 39 Millions of Leading Engineering Talents, 9 National Teaching Masters. </p>
+                  <p> &nbsp;&nbsp;&nbsp;HUST is proud of her national laboratory--“Wuhan National Laboratory for Optoelectronics”(one of the six national labs in China), the National Science Center--“Wuhan National High Magnetic Field Center”, the Center for Gravitational Experiments and the biggest oxy-fuel combustion carbon capture pilot system in China—“3 MWth Carbon Capture Test Base”.</p>
+                  <p> &nbsp;&nbsp;&nbsp;In recent years, a number of high qualified academic papers cited by SCI, EI, ISTP and Medical Literature Analysis and Retrieval System (MEDLARS) have been published. The number of published articles is among the top ten universities in China. In 2014, 7 HUST research projects were awarded by the annual National Science and Technology Awards Ceremony.</p>
+                  <p> &nbsp;&nbsp;&nbsp;HUST has established partnerships with more than 100 renowned universities and research institutions worldwide. Over 1,500 scholars and experts visit and lecture here annually. Since 2013 the campus has welcomed several Nobel Laureates including Prof. Alan J. Heeger, the Nobel Laureate in Chemistry, and Prof. Klaus von Klitzing, German Nobel Prize winner in Physics. Currently around 3000 international students are studying at HUST. The students coming from different parts of the world gather here for degree and non-degree programs. Some courses are taught in Chinese while most of the degree programs are taught in English. Scholarships are accessible to all the applicants. </p>
+                  <p> &nbsp;&nbsp;&nbsp;The university has three affiliated hospitals, including Union Hospital, Tongji Hospital and Liyuan Hospital. The affiliated Union Hospital and Tongji Hospital are large modern comprehensive hospitals that integrate the functions of clinic medical service, teaching, scientific research and training. As the medical centers of Hubei Province and even Southern Central China, the hospitals maintain leading positions in organ transplantation, cardiovascular surgery, hematology, ENT, orthopedics, urology and Geriatric Conditions.</p>
+                  <p> &nbsp;&nbsp;&nbsp;Although the HUST did make a great progress in the past, it will keep on stepping forward with full vigor and vitality, aiming to gain its name as a world top-ranking university and create a brilliant future. </p>
+                  <br>
+                  <hr style="margin-bottom: 50px;">
+                  <h3 style="text-align: center; color: #1e64c8;">College</h3>
+                  <br>
+                  <p> &nbsp;&nbsp;&nbsp;<strong>The College of Life Science and Technology</strong> at HUST was founded in 1980 from the Department of Bioengineering.The College comprises two national key disciplines, biomedical engineering and biology. It has a complete curriculum program from Bachelor degree to Master and Ph.D. degrees and also a post-doctoral training station in the two national key disciplines. The college has a current enrollment of 2029 students including 1201 undergraduate students, 383 MS and 379 PhD students, and 155 international graduate students. It has the biomedical engineering as the national key discipline, the biophysics as the national priority program and the biology as the key discipline of Hubei Province. The College has been playing a key role in HUST in the research areas of biochemistry and biology, molecular biology and genetics, pharmacology and toxicology and agriculture sciences, which are ranked in the top 1% by international ESI.</p>
+                  <br>
+                  <img src="./img/college.jpg" alt="" style="width: 740px;">
+                  <br>
+                  <br>
+                  <p> &nbsp;&nbsp;&nbsp;The college has a high emphasis on the collaboration oversea in research as well as student exchange programs such as United States, Sweden, Germany, Britain, Russia and Australia. Within the college, there are annual forums for MS students and conferences for Ph.D. candidates, cross-disciplinary innovative forums and multiple research salons. The college also invites well-known scientists and researchers to hold both domestic and international meetings.</p>
+                  <p> &nbsp;&nbsp;&nbsp;With the asset over 79 million yuan, the college is aiming to train the outstanding talents with confidence and lead innovative researches and applications in the highly integrated cross-discipline of basic and applied science, engineering and medicine to stay at the forefront of science and to address major national demands for social and economic grow.</p>
+                  <br>
+                </div>
+              </div>
+
+              <!-- Wuhan City -->
+              <div class="main_right">
+                <h2>Wuhan City</h2>
+                <div class="conf_content">
+                  <p> &nbsp;&nbsp;&nbsp;Wuhan, the capital of Hubei Province, is a metropolis with beautiful natural scenery and long history and culture. The Yangtze river and the Han river meet in downtown Wuhan, dividing the central city into three towns facing each other across the river. Furthermore, Li Bai, a poet of the Tang Dynasty, wrote the poem “From the Yellow Crane Tower came the sound of jade flute; in May, Jiangcheng seems to see the falling plum blossoms.”. Therefore, Jiangcheng has become the laudatory name of Wuhan. As the name suggests, there are many rivers and lakes in Wuhan, and the East Lake is one of them.</p>
+                  <br>
+                  <img src="./img/eastlake1.jpg" alt="" style="height: 260px;">
+                  <img src="./img/eastlake2.jpg" alt="" style="height: 260px;">
+                  <br>
+                  <br>
+                  <p> &nbsp;&nbsp;&nbsp;The East Lake scenic spot, located in the center of Wuhan, covers an area of 73 square kilometers, including 33 square kilometers of lake area. The East Lake is the second largest urban lake in China. In the scenic spot, there is an East Lake greenway with a total length of 28.7 kilometers. People can ride, run and walk on the East Lake greenway. There is also a cherry blossom garden in the scenic spot, which is named as the three largest cherry blossom gardens in the world together with the Hirosaki cherry blossom garden in Japan and the Washington cherry blossom garden in USA. The East Lake cherry blossom garden hosts the annual Cherry Blossom Festival from March to April every year.</p>
+                  <br>
+                  <img src="./img/Yangtze.jpg" alt="" style="width: 370px;">
+                  <img src="./img/night.jpg" alt="" style="width: 370px;">
+                  <br>
+                  <br>
+                  <p> &nbsp;&nbsp;&nbsp;The Wuhan Yangtze River Bridge is the first bridge built on the Yangtze River and one of the landmark buildings in Wuhan. Built in 1957, the bridge spans Snake Mountain and Turtle Mountain with a total length of 1,670 meters. The bridge is divided into two floors, the upper floor is a highway with sidewalks on both sides, and the lower floor is a railway.</p>
+                  <p> &nbsp;&nbsp;&nbsp;The Hankou river beach, the largest river beach in Asia with an area of 1.6 million square meters, is a large cultural park near the Yangtze River, which integrates tourism, leisure, fitness, greening and entertainment. As night falls and lights light up on both sides of the riverbank, people walk along the cobbled paths, enjoying the rare leisure of a busy life.</p>
+                  <br>
+                  <img src="./img/tower.jpg" alt="" style="width: 745px;">
+                  <br>
+                  <br>
+                  <p> &nbsp;&nbsp;&nbsp;The Yellow Crane Tower has perched atop Snake Mountain for millennia and centuries, with white clouds wafting around and the Yangtze River surging below. This picturesque edifice vies for historic prestige with Yueyang Tower and Prince Teng Pavilion in Southern China. This masterwork blends classicism and modernism, poetics and aesthetics. Mounting the tower is a twofold luxury. You not only will enjoy inviting views, but also can experience a transcendental realm, in which mind and universe become one. Finally, the mind will be purified. All this is perhaps why the tower has showed off such a fascinating vibe over the past ages.</p>
+                  <br>
+                  <img src="./img/food1.jpg" alt="" style="width: 248px;height: 165px;">
+                  <img src="./img/food2.jpg" alt="" style="width: 248px;">
+                  <img src="./img/food3.jpg" alt="" style="width: 248px;">
+                  <br>
+                  <br>
+                  <p> &nbsp;&nbsp;&nbsp;There are many delicacies in Wuhan. The famous delicacies districts include Wuchang Hubu Lane, Huangpi Delicious Street and Hankou Jiqing Street. "Guo Zao" culture prevails in Wuhan, which means having breakfast. There are kinds of breakfast, such as hot and dry noodles, beef noodles, bean shreds, bean skin, noodle nests, fried buns, glutinous rice chicken, duck neck, soup bags, etc., which are enough to make people eat for a month without repeating.</p>
+                  <br>
+                </div>
+              </div>
+
+              <!-- Contact Us -->
+              <div class="main_right">
+                  <h2>Contact Us</h2>
+                  <div class="conf_content">
+                    <p dir="ltr" style="padding: 0px; margin: 0px; font-size: 14px; color: rgb(17, 17, 17);text-align: left;">
+                      <span style="font-family: 'trebuchet ms', helvetica, sans-serif;">
+                        <b>Conference Secretary</b>
+                      </span><br>
+                      <span style="font-family: 'trebuchet ms', helvetica, sans-serif;">
+                        <b>Ms.</b>
+                      </span>
+                      <span style="font-family: 'trebuchet ms', helvetica, sans-serif;">
+                        <b>&nbsp;</b>
+                      </span>
+                      <span style="font-family: 'trebuchet ms', helvetica, sans-serif;">
+                        <b>Li</b>
+                      </span><br>
+                      <span style="font-family: 'trebuchet ms', helvetica, sans-serif;">
+                        <span style="font-size: 12.6px;">Email:&nbsp;</span>
+                        <strong style="text-align: justify; background: transparent; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline;">
+                          <a href="mailto:ICRICAI@126.com" style="text-decoration-line: none; margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent; color: blue; line-height: 26px;">grace@hust.edu.cn</a>
+                        </strong>
+                      </span><br>
+                      <span style="font-size: 12.6px;">QQ</span>
+                      <span style="font-family: 'trebuchet ms', helvetica, sans-serif; font-size: 12.6px; text-align: justify;">:&nbsp;</span>
+                      <span style="font-family: 'trebuchet ms', helvetica, sans-serif; text-align: justify;">286792205</span><br>
+                      <span style="font-family: 'trebuchet ms', helvetica, sans-serif; text-align: justify;">Tel:&nbsp; +86-13667122851</span>
+                      <span style="font-family: 'trebuchet ms', helvetica, sans-serif; text-align: justify;">&nbsp;(WeChat)</span>
+                    </p>
+                    <p dir="ltr" style="padding: 0px; margin: 0px; font-size: 14px; color: rgb(17, 17, 17);text-align: left;">
+                      <span style="font-family: 'trebuchet ms', helvetica, sans-serif;">
+                        <span lang="EN-US">Please feel free to contact us by phone during 9 am—5:30 pm in the working day or contact us by email.</span>
+                      </span>
+                    </p>
+                  </div>
+                </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+
+  <script>
+    window.onload = function(){
+      let rights = document.querySelectorAll(".main_right");
+      let buttons = document.querySelector(".button_list").querySelectorAll("li");
+      hide();
+      rights[0].style.display = "block";
+      for(let i = 0; i < buttons.length; i++){
+        buttons[i].addEventListener('click',function(){
+          hide();
+          rights[i].style.display = "block";
+        })
+      }
+      function hide(){
+        for(let i = 0; i < buttons.length; i++){
+          rights[i].style.display = "none";
+        }
+      }
+      rights[0].onclick = function(e){
+        if(e.target.innerHTML == "More Topics..."){
+          hide();
+          rights[1].style.display = "block";
+        }
+        else if(e.target.innerHTML == "please click"){
+          hide();
+          rights[5].style.display = "block";
+        }
+      }
+    }
+  </script>
+</body>
+</html>
