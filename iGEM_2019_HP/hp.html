@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <style>
+    #globalWrapper {
+      padding-bottom: 0;
+    }
+    #top_title {
+      display: none;
+    }
+    #content {
+      display: none;
+    }
+    html,body,div,ul,li,a,p,img {
+      margin: 0;
+      padding: 0;
+      font-family: Arial;
+      box-sizing: border-box;
+    }
+    ul {
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+    }
+    .main {
+      width: 1519px;
+    }
+    .main .abstract {
+      margin-top: 16px;
+    }
+    .main .text {
+      background-color: white;
+    }
+    .abstract .bg0 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1519px;
+      z-index: -1;
+    }
+    .abstract .word-bg {
+      position: absolute;
+      top: 0;
+      left: 120px;
+      font-size: 400px;
+      text-align: center;
+      z-index: -1;
+      color: rgba(255, 255, 255, 0.1);
+    }
+    .word {
+      margin-left: 30%;
+    }
+    .word .main-content {
+      margin-top: 50px;
+      margin-left: 50px;
+      width: 750px;
+      color: white;
+      font-size: 20px;
+    }
+    .subtitle {
+      display: flex;
+    }
+    .subtitle .titletree {
+      width: 100px;
+      height: 100px;
+      margin-top: 110px;
+      z-index: 1;
+    }
+    .subtitle .title-content {
+      height: 70px;
+      margin-top: 140px;
+      margin-left: -50px;
+      padding: 5px 15px;
+      line-height: 70px;
+      font-size: 50px;
+      text-align: center;
+      color: white;
+      background-color: rgb(98, 166, 245);
+      border-radius: 20px;
+    }
+    .subtitle .titlelogo {
+      width: 250px;
+      margin-left: -150px;
+    }
+    .text .subtitle {
+      margin-top: 58px;
+    }
+    .text .word .main-content {
+      margin-top: 20px;
+      margin-bottom: 80px;
+      color: black;
+    }
+    .text .word .part-title .dot {
+      float: left;
+      margin: 10px 5px 0 5px;
+      width: 20px;
+      height: 20px;
+      background-color: rgb(98, 166, 245);
+      border-radius: 50%;
+    }
+    .text .word .part-title {
+      margin-top: 30px;
+    }
+    .text .word .part-title .dot:after {
+      content: "";
+      display: table;
+      clear: both;
+      width: 15px;
+      height: 15px;
+      background-color: white;
+      border-radius: 50%;
+    }
+    .text .word .part-title .title {
+      font-size: 30px;
+    }
+    .text .word .main-content .word-img {
+      display: block;
+      margin: 0 auto;
+      width: 500px;
+    }
+    .header .nav {
+      position: fixed;
+      left: 80px;
+      top: 100px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 6px #ccc;
+      z-index: 2;
+      
+    }
+    .header .nav .logo {
+      position: absolute;
+      right: 0;
+      top: -80px;
+      width: 150px;
+      cursor: pointer;
+    }
+    .header .nav .level-1 {
+      background-color: rgb(42, 62, 175);
+    }
+    .header .nav .level-1 a {
+      display: inline-block;
+      height: 40px;
+      padding: 5px 0;
+      color: white;
+      font-size: 24px;
+    }
+    .header .nav .level-1 li:hover {
+      background-color: rgb(20, 33, 92);
+    }
+    .header .nav .level-1 li:hover div:after {
+      content: "";
+      display: table;
+      clear: both;
+      width: 17px;
+      height: 17px;
+      background-color: rgb(20, 33, 92);
+      border-radius: 50%;
+    }
+    .header .nav .level-1 div {
+      float: left;
+      margin: 10px 5px 0 5px;
+      width: 20px;
+      height: 20px;
+      background-color: rgb(98, 166, 245);
+      border-radius: 50%;
+    }
+    .header .nav .level-1 .level-2 a {
+      font-size: 18px;
+    }
+    .header .nav .level-1 .level-2 div {
+      margin: 7px 5px 0 60px;
+    }
+    .header .nav .level-1 .level-2 div:after {
+      content: "";
+      display: table;
+      clear: both;
+      width: 17px;
+      height: 17px;
+      background-color: rgb(42, 62, 175);
+      border-radius: 50%;
+    }
+    .footer .tail {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+    }
+    .footer .up {
+      position: fixed;
+      bottom: 100px;
+      right: 20px;
+      cursor: pointer;
+    }
+    .show {
+      width: 100%;
+      height: 312px;
+      background-color: rgb(98, 166, 245);
+    }
+    .show img {
+      display: block;
+    }
+    .show .left {
+      float: left;
+      width: 50%;
+    }
+    .show .left img {
+      width: 100%;
+    }
+    .show .big-img {
+      margin-top: 20px;
+      padding-left: 10px;
+      height: 275px;
+    }
+    .show .right {
+      float: left;
+      width: 50%;
+    }
+    .show .imgcontain {
+      position: relative;
+    }
+    .show .imgcontain img {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 100px;
+    }
+    .show .show-word {
+      padding: 30px 30px 50px 30px;
+      background-color: rgb(98, 166, 245);
+      color: white;
+    }
+    .need-done {
+      height: 300px;
+    }
+  </style>
+<body>
+  <div class="header">
+    <div class="nav">
+      <a href="https://2019.igem.org/Team:HUST-China">
+        <img src="https://2019.igem.org/wiki/images/0/01/T--HUST-China--logo.png" alt="HUST-China logo" class="logo">
+      </a>
+      <ul>
+        <li class="level-1">
+          <div> </div>
+          <a href="">Introduction</a>
+        </li>
+        <li class="level-1">
+          <div> </div>
+          <a href="">Integrated Human Practice</a>
+          <ul>
+            <li class="level-2">
+              <div> </div>
+              <a href="">Investiation</a>
+            </li>
+            <li class="level-2">
+              <div> </div>
+              <a href="">Field trip</a>
+            </li>
+            <li class="level-2">
+              <div> </div>
+              <a href="">Interview</a>
+            </li>
+          </ul>
+        </li>
+        <li class="level-1">
+          <div> </div>
+          <a href="">Education & Public Engagement</a>
+          <ul>
+            <li class="level-2">
+              <div> </div>
+              <a href="">Giving a biology class</a>
+            </li>
+            <li class="level-2">
+              <div> </div>
+              <a href="">Hosting the summer camp</a>
+            </li>
+            <li class="level-2">
+              <div> </div>
+              <a href="">Online research</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="main">
+    <div class="abstract">
+      <img src="./img/hp-bg0.png" alt="model-abstract" class="bg0">
+      <div class="word-bg">Human</div>
+      <div class="word">
+        <div class="subtitle">
+          <img src="https://2019.igem.org/wiki/images/8/8e/T--HUST-China--tree.png" alt="banana-tree" class="titletree">
+          <div class="title-content">Introduction</div>
+          <img src="https://2019.igem.org/wiki/images/d/da/T--HUST-China--sub-logo.png" alt="sub-logo" class="titlelogo">
+        </div>
+        <div class="main-content">
+          &emsp;&emsp;Our programme aims to turn the agriculture waste-banana stalks into treasures and help farmer promote their life quality. With intense passion, we visited the factory of plants degumming, took a field trip to the banana planting base and communicated with several professors, just in order to find out the answers of these questions: <br>
+          <br>
+          &emsp;&emsp;1.What blocks the biological degumming industry nowadays?<br>
+          &emsp;&emsp;2.It’s significant to handle banana stalks with biology engineering or not?<br>
+          &emsp;&emsp;3.What trouble we will meet during the industrialization of our project and <br>
+          &emsp;&emsp;&emsp;&emsp;how can we settle it? <br>
+          &emsp;&emsp;4.Can our project flourish the banana industry again in the future?
+        </div>
+      </div>
+    </div>
+    <div class="text">
+      <div class="word">
+        <div class="subtitle">
+          <img src="https://2019.igem.org/wiki/images/8/8e/T--HUST-China--tree.png" alt="banana-tree" class="titletree">
+          <div class="title-content">Integrated Human Practice</div>
+          <img src="https://2019.igem.org/wiki/images/d/da/T--HUST-China--sub-logo.png" alt="sub-logo" class="titlelogo">
+        </div>
+        <div class="part-title">
+          <div class="dot"> </div>
+          <div class="title">Investigation</div>
+        </div>
+        <div class="main-content">
+          <img src="https://2019.igem.org/wiki/images/a/ac/T--HUST-China--hp3.png" alt="" class="word-img">
+          <img src="https://2019.igem.org/wiki/images/3/3f/T--HUST-China--hp1.png" alt="" class="word-img"><br><br>
+          &emsp;&emsp;Since the banana fibers are similar to ramie in their composition, we decided to visit Hubei Jinghua Textile Group in Wuhan in order to find out the status quo of the degumming technology of natural plant fibers. We can feel a kind of pungent smell the moment we got into the workshop. We interviewed the company director and find out that they used chemical degumming technology in majority to treat ramie. He also complained about the disadvantages of traditional chemical degumming methods to us. For example, the fibers dealt by chemical degumming methods are inferior in quality. In addition, this way produces a large amount of sewage which is difficult to treat. And the poor working conditions caused by the chemical waste do great harm to worker’s health. <br><br><br>
+          <img src="https://2019.igem.org/wiki/images/1/19/T--HUST-China--hp2.png" alt="" class="word-img"><br><br>
+          &emsp;&emsp;While visiting, we stumbled upon a defunct biological degumming device. The manager explained that the biological degumming method has once been taken into practice but disposed of since it had some problems in practical application. The most prominent problem is that the environmental conditions required for bio-degumming are too strict, resulting in high cost of bio-degumming. We decided to learn from the failure of biological degumming of ramie and make our project connected more to the reality and fit in the factory operations. As a result, we add a PH feedback system to make our engineering organism more intelligent and able to make autonomic response to the environmental changes.
+        </div>
+        <div class="part-title">
+          <div class="dot"> </div>
+          <div class="title">Field trip</div>
+        </div>
+        <div class="main-content">
+          &emsp;&emsp;Xuwen, in Zhanjiang City, Guangdong province, is known as the first county in China for banana planting. We went to Xuwen this summer to take a knowledge of the current situation of banana stalks treatment. We talked with the county party secretary of Xuwen about the banana planting and the method to disposing remanent stalks. He claimed that they really didn’t know how to deal with the banana stalks in applicable ways. In normal, they just cut them down and pile up a part of them in the farmlands as fertilizer. And they had to discard the rest of them just beside the streets which is really a waste of space. <br><br><br>
+          <img src="https://2019.igem.org/wiki/images/7/7a/T--HUST-China--hp4.png" alt="" class="word-img"><br><br>
+          &emsp;&emsp;We also communicated with the leaders and experts of the local Agriculture Bureau and introduced our project and synthetic biology to them. We gave out our brochures of our project to them and they were looking forward to the industrialization of our project. They claimed that it is much better than the chemical methods which made a lot of pollution and will solve a big problem in the banana planting industry. <br><br>
+          <img src="https://2019.igem.org/wiki/images/c/c6/T--HUST-China--hp5.png" alt="" class="word-img"><br><br>
+          &emsp;&emsp;During our field trip to the farmlands, we found that the banana industry was hit by a kind of fungal infection-- banana panama disease. The fungus causing this disease is Fusarium oxysporum which infects banana in special. During our talk with the experts, we found out that this fungus can infect the banana trees through soil and water. We put forward that it has a large possibility that the fast spread of banana panama disease is connected to the straw compost. In the previous year, the fungus in the banana stalk penetrated into the soil due to composting behavior, and then infected with new seedlings. The experts agreed with this guess and that the treatment of banana stalks today does exacerbate the spread of banana panama disease. As a result, our project may help with the banana industry not only by disposing of waste and increasing production value, but also by alleviating the damage caused by banana panama disease to the banana industry. <br><br>
+          &emsp;&emsp;Banana panama disease: fungi disease caused by Fusarium oxysporum f. sp. Cubense infection and spread around the world. It will make banana withering and die away gradually. In general, 3-5 years is must to soil recovery. <br><br>
+          <img src="https://2019.igem.org/wiki/images/7/7e/T--HUST-China--hp6.png" alt="" class="word-img"><br><br>
+        </div>
+        <div class="part-title">
+          <div class="dot"> </div>
+          <div class="title">Interview</div>
+        </div>
+        <div class="subtitle">
+          <img src="https://2019.igem.org/wiki/images/8/8e/T--HUST-China--tree.png" alt="banana-tree" class="titletree">
+          <div class="title-content">Eduction & Public Engagement</div>
+          <img src="https://2019.igem.org/wiki/images/d/da/T--HUST-China--sub-logo.png" alt="sub-logo" class="titlelogo">
+        </div>
+        <div class="part-title">
+          <div class="dot"> </div>
+          <div class="title">Giving a biology class</div>
+        </div>
+        <div class="main-content">
+          <div class="show">
+            <div class="left">
+              <img src="./img/1.png" alt="" class="big-img">
+            </div>
+            <div class="right imgcontain">
+              <div class="show-word">In order to introduce synthetic biology to young students and show them the magic of Biology, we cooperated with HBUT-China and went to Tongji Affiliated Secondary School to teach the students there a biology class. During the class, we taught them a lot of knowledge of biology and took them to the gate of synthetic</div>
+              <img src="https://2019.igem.org/wiki/images/5/56/T--HUST-China--hp_subword.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="part-title">
+          <div class="dot"> </div>
+          <div class="title">Hosting the summer camp</div>
+        </div>
+        <div class="main-content">
+          <div class="show">
+            <div class="left imgcontain">
+              <div class="show-word">To promote our projects and iGEM’s influence, we hosted a summer camp for high school students who visited our college. We taught them to do microbiology experiments and explain our project to them. We told them the disadvantages of chemical degumming methods and what problem we can solve if our</div>
+              <img src="https://2019.igem.org/wiki/images/5/56/T--HUST-China--hp_subword.png" alt="">
+            </div>
+            <div class="right">
+              <img src="./img/4.png" alt="" class="big-img">
+            </div>
+          </div>
+        </div>
+        <div class="part-title">
+          <div class="dot"> </div>
+          <div class="title">Online research</div>
+        </div>
+        <div class="need-done">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <img src="https://2019.igem.org/wiki/images/e/eb/T--HUST-China--tail.png" alt="tail" class="tail">
+    <img src="./img/hp-upbutton.png" alt="go-head" class="up">
+  </div>
+</body>
+</html>
