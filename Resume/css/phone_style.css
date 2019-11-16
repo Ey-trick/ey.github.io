@@ -121,12 +121,18 @@
   .personal .f3 {
     margin-left: 70px;
   }
+  .personal .f4 {
+    margin-left: 50px;
+  }
   .infor .level-2{
     width: 100%;
   }
   .huge .f1 {
     margin-left: 10px;
     color: rgb(33, 68, 134);
+  }
+  .huge .content {
+    font-size: 18px;
   }
   .infor .level-2 ul {
     margin-top: 10px;
@@ -146,20 +152,47 @@
     right: 45px;
     width: 70px;
     height: 70px;
-    background: url(../img/head.png) no-repeat;
     border: 0.5px solid gray;
     border-radius: 50%;
+    overflow: hidden;
+  }
+  .photo img {
+    width: 70px;
+    height: 70px;
+  }
+  .project {
+    margin-top: 10px;
+    display: flex;
+  }
+  .project img {
+    width: 100px;
+  }
+  .project .process {
+    padding: 10px;
+    height: 90px;
+    overflow: scroll;
+    font-size: 12px;
+  }
+  .project .process::-webkit-scrollbar{
+    width: 4px;
+    height: 0px;
+  }
+  .project .process::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background: #d1d4db;
+  }
+  .huge hr {
+    background: url(../img/divide.png) no-repeat;
+    border: medium none;
+    width: 250px;
+    height: 19px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 }
 @media (max-width: 321px) {
   .photo {
-    position: absolute;
-    top: 120px;
     right: 0;
-    width: 70px;
-    height: 70px;
-    background: url(../img/head.png) no-repeat;
-    border: 0.5px solid gray;
-    border-radius: 50%;
   }
 }

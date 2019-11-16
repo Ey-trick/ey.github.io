@@ -1,3 +1,189 @@
-@media (min-width: 426px) and (max-width:1440px) {
-  
+@media (min-width: 426px){
+  #container {
+    width: 100%;
+    background-color: rgb(82, 75, 75);
+  }
+  .title {
+    width: 100%;
+    height: 300px;
+    background-color: rgb(255, 174, 0);
+  }
+  .title:after {
+    width: 0px;
+    content: "";
+    float: right;
+    display: block;
+    border: 69px solid;
+    border-color:  rgb(221, 153, 98) rgb(82, 75, 75) rgb(82, 75, 75) rgb(221, 153, 98);
+}
+  .title .big {
+    display: none;
+  }
+  .title .side {
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 20px;
+  }
+  .title .side div {
+    color: white;
+    text-align: center;
+  }
+  .title .side .up {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  .title .side .down {
+    font-size: 80px;
+  }
+  .infor {
+    position: relative;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 50px;
+    color: white;
+  }
+  .main-person {
+    float: left;
+    width: 350px;
+    border-radius: 10px;
+    background-color: rgba(150, 143, 143, 0.5);
+  }
+  .main-person .tip {
+    display: none;
+  }
+  .photo {
+    position: absolute;
+    top: 60px;
+    left: 50px;
+    width: 100px;
+    height: 100px;
+  }
+  .photo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: dotted yellow 4px;
+  }
+  .main-person .huge {
+    margin-top: 230px;
+    margin-left: 50px;
+    padding-right: 20px;
+  }
+  .main-person .huge .name {
+    color: yellow;
+    font-size: 40px;
+  }
+  .main-person .huge .summa {
+    margin-top: 10px;
+    border-bottom: 1px solid yellow;
+  }
+  .main-person .huge .personal {
+    margin-bottom: 50px;
+  }
+  .huge .f1 {
+    margin-top: 20px;
+    color: yellow;
+  }
+  .main-person .huge .personal .pc_f {
+    margin-left: 70px;
+  }
+  .pc_level {
+    padding-left: 380px;
+  }
+  .pc_level .project {
+    margin: 20px 10px 10px 20px;
+    display: flex; 
+  }
+  .pc_level .project img {
+    width: 200px;
+  }
+  .project .process {
+    padding: 10px;
+    height: 150px;
+    overflow: scroll;
+  }
+  .project .process::-webkit-scrollbar{
+    width: 4px;
+    height: 0px;
+  }
+  .project .process::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background: #d1d4db;
+  }
+  .pc_level .summa {
+    display: none;
+  }
+  .pc_level .tip {
+    height: 35px;
+    width: 150px;
+    line-height: 35px;
+    color: #fff;
+    background: 
+              linear-gradient(-45deg, transparent 52px, rgb(255, 174, 0) 0) bottom right,
+              linear-gradient(-135deg, transparent 52px, rgb(255, 174, 0) 0) top right;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+  }
+  .pc_level .aside {
+    margin: -26px 0 10px 40px;
+    height: 17px;
+    width: 250px;
+    background: 
+              linear-gradient(135deg, transparent 52px, rgba(72, 105, 214, 0.938) 0) top left,
+              linear-gradient(45deg, transparent 52px, rgba(72, 105, 214, 0.938) 0) bottom left;
+      background-size: 50% 50%;
+      background-repeat: no-repeat;
+  }
+  .pc_level .huge {
+    margin-left: 10px;
+    padding-bottom: 20px;
+    width: 90%;
+    border-top: 1px solid rgba(128, 128, 128, 0.432);
+    border-left: 4px dotted rgb(255, 174, 0);
+  }
+  .pc_level .summa+ul {
+    margin-left: 20px;
+  }
+  .level-3 {
+    display: flex;
+  }
+  .level-3 .f1 {
+    margin-left: 15%;
+    line-height: 26.4px;
+    color: yellow;
+  }
+  .level-3 .content {
+    margin-top: 20px;
+    margin-left: 1%;
+    font-size: 20px;
+  }
+  .infor .level-2 .huge .text {
+    padding: 20px 10px 50px 20px;
+  }
+}
+@media (max-width:1085px) and (min-width:926px){
+  .infor {
+    width: 100%;
+  }
+}
+@media (max-width:925px) and (min-width:841px){
+  .title:after {
+    border: 23px solid;
+    border-color:  rgb(221, 153, 98) rgb(82, 75, 75) rgb(82, 75, 75) rgb(221, 153, 98);
+  }
+  .infor {
+    width: 100%;
+  }
+}
+@media (max-width:840px) and (min-width:426px) {
+  #container {
+    width: 840px;
+  }
+  .title:after {
+    border: 23px solid;
+    border-color:  rgb(221, 153, 98) rgb(82, 75, 75) rgb(82, 75, 75) rgb(221, 153, 98);
+  }
+  .infor {
+    width: 100%;
+  }
 }

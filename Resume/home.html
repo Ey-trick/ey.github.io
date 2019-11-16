@@ -15,6 +15,7 @@
   div {
     margin: 0;
     padding: 0;
+    text-align: justify;
     box-sizing: border-box;
     font-family: Arial,'Times New Roman','Microsoft YaHei';
   }
@@ -47,7 +48,7 @@
       </div>
     </div>
     <div class="infor">
-      <div class="level-2">
+      <div class="level-2 main-person">
         <div class="tip">&nbsp;&nbsp;基本信息</div>
         <div class="aside"></div>
         <div class="huge">
@@ -58,35 +59,107 @@
           <div class="personal">
             <ul>
               <li class="f1 f2">出生日期：</li>
-              <li class="f2">1999年4月1日</li>
+              <li class="f2 pc_f">1999年4月1日</li>
               <li class="f1 f2">所在城市：</li>
-              <li class="f2">武汉</li>
+              <li class="f2 pc_f">武汉</li>
               <li class="f1 f2">就读学校：</li>
-              <li class="f2">华中科技大学&ensp;</li>
-              <li class="f1 f2">当前专业：</li>
-              <li class="f2">生物信息学</li>
-              <li class="f1 f2">联系电话：</li>
-              <li class="clc f3">18071271183</li>
+              <li class="f2 pc_f">华中科技大学&ensp;</li>
+              <li class="f1 f2">专业：</li>
+              <li class="f2 pc_f">生物信息学</li>
+              <li class="f1 f2">年级：</li>
+              <li class="f2 pc_f">本科三年级</li>
+              <li class="f1 f2 f4">QQ：</li>
+              <li class="f2 pc_f">1207971322</li>
+              <li class="clc"></li>
+              <li class="f1" style="margin-top: 20px;">联系电话：</li>
+              <li class="f3 pc_f">18071271183</li>
               <li class="f1">电子邮箱：</li>
-              <li class="f3">yeyaoxiong@hust.edu.cn</li>
+              <li class="f3 pc_f">yeyaoxiong@hust.edu.cn</li>
             </ul>
           </div>
-          <div class="photo"></div>
+          <div class="photo"><img src="./img/head.jpg" alt="photo"></div>
         </div>
       </div>
-      <div class="level-2">
+      <div class="level-2 pc_level">
           <div class="tip">&nbsp;&nbsp;求职意向</div>
           <div class="aside"></div>
           <div class="huge">
-            <ul>
+            <ul class="level-3">
               <li class="f1">意向岗位：</li>
-              <li>前端</li>
+              <li class="content">前端</li>
               <li class="f1">意向城市：</li>
-              <li>北京</li>
+              <li class="content">北京</li>
             </ul>
           </div>
       </div>
-      <div class="level-2">
+      <div class="level-2 pc_level">
+        <div class="tip">&nbsp;&nbsp;个人项目</div>
+        <div class="aside"></div>
+        <div class="huge">
+          <div class="summa">
+            点击图标可以跳转进项目网址哦~<br>
+            文字部分内含滚动条可以滚动观看~ :)
+          </div>
+          <div class="project">
+            <a href="https://2019.igem.org/Team:HUST-China" target="_blank">
+              <img src="./img/iGEM.png" alt="iGEM">
+            </a>
+            <div class="process">
+              &emsp;参加iGEM_2019(国际遗传机器大赛)，团队Wiki(包括导航栏上所有跳转过去的页面)由我一人完成。<br>
+              &emsp;从队长交给我任务到Wiki-freeze(网页冻结不能被修改)一共只5天，我把它写完了！！！虽然只写了PC端的样式，但至少帮助我们团队HUST-China拿了国际金奖。<br>
+              &emsp;整个项目涉及大量html，css，运用了较少js知识(包括轮播图、DOM操作、事件委托)。<br>
+              &emsp;通过这个项目我看到了自己对前端真正的热爱与自己的责任心。
+            </div>
+          </div>
+          <hr>
+          <div class="project">
+            <a href="../web/ICBMU.html" target="_blank" style="margin-top: 20px;">
+              <img src="./img/conference.png" alt="ICMBU">
+            </a>
+            <div class="process">
+              &emsp;帮学院教授写的国际超声会议介绍网页。<br>
+              &emsp;是我第一次摸索学会运用icon-font，当时为学到新技能而高兴了好久。<br>
+              &emsp;我相信我也会为在实习过程中学到的新知识而高兴很久很久的~ <br>
+              &emsp;一直以来我都没能做到很多涉及高级js(如Ajax，NodeJS..)的项目，我觉得自己有干活的热情与学习的能力(我有在看这方面的书籍与博客)，大概自己缺少一个理由吧，希望能借助实习机会学到更多掌握更多，不会偷懒哒~
+            </div>
+          </div>
+          <hr>
+          <div class="project">
+            <a href="../Jump Bird/play.html" target="_blank">
+              <img src="./img/jump_bird.png" alt="flappyBird">
+            </a>
+            <div class="process">
+              &emsp;仿写的低配版游戏flappyBird。<br>
+              &emsp;感觉写游戏还挺好玩的...虽然只是一个小游戏难登大雅之堂...就当写来自己放松了。<br>
+              &emsp;Anyway, Study With Fun. ~
+            </div>
+          </div>
+          <hr>
+          <div class="project">
+            <a href="../Schedule-2/2019-autumn.html" target="_blank">
+              <img src="./img/schedule.png" alt="schedule">
+            </a>
+            <div class="process">
+              &emsp;为自己写的本学期课表。<br>
+              &emsp;拥有实时显示功能，还能查看各周课程安排，包含跳转查询功能。
+            </div>
+          </div>
+          <hr>
+          <div class="project">
+            <a href="https://github.com/Ey-trick/ey.github.io" target="_blank">
+              <img src="./img/github.png" alt="GitHub" style="border-radius: 50%; width: 100px;">
+            </a>
+            <div class="process">
+              &emsp;我写过的部分demo，源码已传上了GitHub，有兴趣可以查看。<br>
+              &emsp;<== <br>
+              &emsp;<== <br>
+              &emsp;<== <br>
+            </div>
+          </div>
+
+        </div>
+    </div>
+      <div class="level-2 pc_level">
           <div class="tip">&nbsp;&nbsp;学习经历</div>
           <div class="aside"></div>
           <div class="huge">
@@ -110,7 +183,7 @@
             </ul>
           </div>
       </div>
-      <div class="level-2">
+      <div class="level-2 pc_level">
           <div class="tip">&nbsp;&nbsp;自我评价</div>
           <div class="aside"></div>
           <div class="huge" style="padding: 0; margin-bottom: 20px;">
