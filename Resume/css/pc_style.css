@@ -13,7 +13,7 @@
     content: "";
     float: right;
     display: block;
-    border: 69px solid;
+    border: 68.2px solid;
     border-color:  rgb(221, 153, 98) rgb(82, 75, 75) rgb(82, 75, 75) rgb(221, 153, 98);
 }
   .title .big {
@@ -168,7 +168,7 @@
 }
 @media (max-width:925px) and (min-width:841px){
   .title:after {
-    border: 23px solid;
+    border: 22.2px solid;
     border-color:  rgb(221, 153, 98) rgb(82, 75, 75) rgb(82, 75, 75) rgb(221, 153, 98);
   }
   .infor {
