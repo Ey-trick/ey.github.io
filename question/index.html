@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .cover {
+      display: flex;
+      overflow: hidden;
+    }
+    .cover div {
+      width: 400px;
+      padding-bottom: 999px;
+      margin-bottom: -999px;
+    }
+    .inner {
+      color: aliceblue;
+      height: 0;
+      margin: 25% auto;
+      margin-left: 10px;
+      margin-right: 10px;
+      padding: 25% 0;
+      font-size: 120px;
+      background-color: coral;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cover">
+    <div class="col1" style="background-color: brown;font-size: 120px;">123</div>
+    <div class="col2" style="background-color: burlywood;font-size:20px;">456</div>
+  </div>
+  <div class="inner"> A </div>
+  <script>
+//1.类型判别
+    if ([] == false) {console.log(1);};
+    if ({} == false ) {console.log(2);};
+    if ([]) {console.log(3);};
+    if ([1] == [1]) {console.log(4);}; //两个数组对象的物理地址不一样，所以不相等。
+    console.log('------------------------------------------');
+
+//2.事件循环
+    async function async1() {
+    console.log('async1 start');
+    await async2(); //跳转到async2()执行，并往后。
+    console.log('async1 end');  //当async2()后面所有函数执行完毕，再执行‘console.log('async1 end');’
+    }
+    async function async2() {
+    console.log('async2');
+    }
+    console.log('script start'); //最先打印，‘script start’
+    setTimeout(function () {
+    console.log('setTimeout');  //setTimeout是等第一轮上下文全部执行完再执行。
+    }, 0);
+    async1(); //函数调用，打印‘async1 start’，等待async2()打印‘async2’
+    new Promise(function (resolve) {
+    console.log('promise1');
+    resolve();
+    }).then(function () {
+    console.log('promise2'); //then是在第一轮上下文执行的最后执行。
+    });
+    console.log('script end');
+    console.log('------------------------------------------');
+
+//3.判断一个对象是否为数组
+    //方法一、构造一个检验函数(来自JavaScript精粹)
+    var is_array = function (value) {
+      return Object.prototype.toString.apply(value) === '[object Array]'; 
+    }
+    let Arr = [1,2,3];
+    let Obj = {name:'object'};
+    console.log(is_array(Arr)); //true
+    console.log(is_array(Obj)); //false
+    //分析原理：
+    console.log(Object.prototype.toString.apply(Arr));
+    console.log(Array.prototype.toString.apply(Obj));
+    console.log('------------------------------------------');
+
+    //方法二、根据“数组具有 length 属性，而对象没有”来判断
+    console.log("length of " + Arr + ': ' + Arr.length);
+    console.log("length of " + Obj + ': ' + Obj.length);
+    console.log(Arr.hasOwnProperty('length')); //true
+    console.log(Obj.hasOwnProperty('length')); //false
+    console.log('------------------------------------------');
+
+//4.封装类型判断函数
+    function gettype(obj) {
+      var type = typeof obj;
+
+      //如果不是object类型的数据，直接用typeof就能判断出来
+      if (type !== 'object') {
+        return type;
+      }
+
+      //如果是object类型数据，准确判断类型必须使用Object.prototype.toString.call(obj)的方式才能判断
+      return Object.prototype.toString.call(obj).replace(/^\[object (\S+)\]$/, '$1');
+    }
+    console.log(gettype(Arr));
+    console.log(gettype(Obj));
+    console.log('------------------------------------------');
+
+//5.数组去重
+    let repeat_array = [1,2,3,3,5,7,7,7,9];
+    repeat_array = Array.from(new Set(repeat_array)); //去重
+    console.log(repeat_array);
+    console.log('------------------------------------------');
+
+//6.this指向，闭包
+    const obj = {
+      name: " jsCoder",
+      skill: ["es6", "react", "angular"],
+      say: function () {
+        let that = this;
+        for(let i = 1, len = that.skill.length; i< len + 1; i++){
+          setTimeout(function(){
+            console.log('No.' + i + that.name);
+            console.log(that.skill[i - 1]);
+            console.log('--------------------------');
+          }, 0);
+          console.log(i);
+        }
+      }
+    };
+    obj.say();
+
+//7.使用JS实现一个repeat方法，调用这个 repeatedFunc("hellworld")，会alert4次 helloworld, 每次间隔3秒
+// function repeat(func, times, wait) {
+// }
+// const repeatFunc = repeat(alert, 4, 3000)
+    function repeat(func, times, wait) {
+      return function(e) {
+        for(let i = 0; i < times; i ++) {
+          setTimeout(function () {
+            func(e);
+          },wait * i);
+        }
+      }
+    }
+    const repeatFunc = repeat(alert, 4, 3000);
+    repeatFunc("HelloWorld");
+    console.log('--------------------------');
+
+//8.
+    var a = function () { this.b = 3; }
+    var c = new a();
+    a.prototype.b = 9;
+    var b = 7;
+    a();
+    console.log(b);    //3 : a函数的作用，将3赋值给this(全局)的b
+    console.log(c.b);  //3 : a对象是一个函数，构造新的a对象时就执行了a()，把3赋值给了b
+    console.log('--------------------------');
+
+//9.算法:从给定的无序、不重复的数组data中，取出n个数，使其相加和为sum。
+    function getRsult(data,n,sum){
+			if(n==0 &&sum==0){
+				return  true
+			}
+			if(n<0){
+				return false 
+			}
+			if(n>0){
+				for(var i = 0; i < data.length; i++){
+		      var temp = data.slice(i+1,data.length);
+		      return getRsult(temp,n-1,sum-data[i]) || getRsult(temp,n,sum); //时间复杂度2的n次方，空间复杂度2的n次方
+			  }
+			}
+		};
+		console.log(getRsult([1,2,3,4,5,6,7],4,19))
+    console.log('--------------------------');
+
+//10.bind函数
+    function Animal(name, color) {
+      this.name = name;
+      this.color = color;
+    }
+    Animal.prototype.say = function () {
+      return `I'm a ${this.color} ${this.name}`;
+    };
+    const Cat = Animal.bind(null, 'cat');
+    const cat = new Cat('white');
+    if (cat.say() === 'I\'m a white cat' && cat instanceof Cat && cat instanceof Animal) {
+      console.log('success');
+    }
+    console.log('--------------------------');
+  </script>
+</body>
+</html>
