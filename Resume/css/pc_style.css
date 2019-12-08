@@ -115,7 +115,7 @@
   }
   .pc_level .tip {
     height: 35px;
-    width: 150px;
+    width: 170px;
     line-height: 35px;
     color: #fff;
     background: 
@@ -125,7 +125,7 @@
       background-repeat: no-repeat;
   }
   .pc_level .aside {
-    margin: -26px 0 10px 40px;
+    margin: -26px 0 10px 60px;
     height: 17px;
     width: 250px;
     background: 
