@@ -84,7 +84,7 @@
       background-repeat: no-repeat;
   }
   .aside {
-    margin: -20px 0 3px 30px;
+    margin: -20px 0 3px 50px;
     height: 17px;
     width: 250px;
     background: 
@@ -136,6 +136,10 @@
   }
   .infor .level-2 ul {
     margin-top: 10px;
+    width: 270px;
+  }
+  .personal ul {
+    width: 160px;
   }
   .infor .level-2 ul li {
     margin: 10px 0 0 10px;
