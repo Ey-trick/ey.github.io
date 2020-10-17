@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>开始愉快地答题吧ψ(._. )></title>
+  <style>
+    .btn {
+      margin: 0 auto;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      color: white;
+      background-color: lightblue; 
+      text-align: center;
+      line-height: 200px;
+      font-size: 40px;
+      cursor: pointer;
+    }
+    .wrapper {
+      display: none;
+      width: 80%;
+      margin: 0 auto;
+      margin-top: 50px;
+      background-color: lightgreen;
+      border-radius: 20px;
+      border: 1px solid greenyellow;
+    }
+    .wrapper .next {
+      margin-top: 20px;
+      margin-left: 85%;
+      margin-right: 5%;
+      border: 3px solid rgb(10, 120, 156);
+      color: rgb(10, 120, 156);
+      border-radius: 5px;
+      font-size: 24px;
+      text-align: center;
+      cursor: pointer;
+    }
+    .wrapper .descript, .wrapper .options {
+      margin: 50px;
+      font-size: 40px;
+    }
+    .wrapper .ans {
+      width: 150px;
+      padding: 10px;
+      margin-bottom: 50px;
+      margin-left: 50px;
+      border: 3px solid rgb(241, 79, 58);
+      color: rgb(241, 79, 58);
+      border-radius: 5px;
+      font-size: 24px;
+      text-align: center;
+      cursor: pointer;
+    }
+    .wrapper .ansText {
+      margin-bottom: 50px;
+      margin: 50px;
+      font-size: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="btn">开始</div>
+  <div class="wrapper">
+    <div class="next">下一题</div>
+    <div class="descript"></div>
+    <div class="options"></div>
+    <div class="ans">显示答案</div>
+    <div class="ansText"></div>
+  </div>
+
+  <script>
+    let all = document.getElementsByClassName("wrapper")[0];
+    let ques = all.getElementsByClassName("descript")[0];
+    let opt = all.getElementsByClassName("options")[0];
+    let ans = all.getElementsByClassName("ansText")[0];
+    function getrandom(len) {
+      let num = Math.random();
+      num = Math.floor(num * len);
+      return num;
+    }
+    function show(data) {
+      let len = data.length;
+      let num = getrandom(len);
+      ques.innerHTML = data[num].question;
+      opt.innerHTML = data[num].options;
+      all.getElementsByClassName("ans")[0].onclick = function() {
+        ans.innerHTML = data[num].answer;
+      }
+    }
+    function dataJson(json) {
+      document.getElementsByClassName("btn")[0].onclick = function() {
+        this.style.display = "none";
+        all.style.display = "block";
+        show(json.data);
+      }
+      all.getElementsByClassName("next")[0].onclick = function() {
+        ans.innerHTML = "";
+        show(json.data);
+      }
+    }
+  </script>
+  <script src="./json/questions.json?cb=dataJson"></script>
+</body>
+</html>
