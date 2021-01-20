@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>尝试Vue的第一个demo</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+  <div id="app">
+    <p v-html="message"></p>
+    <input type="button" value="press" v-bind:title="mytitle" v-on:click="show">
+    <div style="margin: 100px 0;">JS Animation
+      <input type="button" value="start" @click="start">
+      <input type="button" value="stop" @click="stop">
+      <p v-text="text1" style="color: lightblue;"></p>
+      <p v-text="text2" style="color: lightblue;"></p>
+      <p v-text="text3" style="color: lightblue;"></p>
+    </div>
+    v-bind:
+    <input type="text" :value="info" style="width: 100%;">
+    v-model:
+    <input type="text" v-model="info" style="width: 100%;">
+    <div style="margin-top: 100px;">
+      <input type="button" :value="btn" @click="toggle">
+      <p v-show="flag">Vue (pronounced /vjuː/, like view) is a progressive framework for building user interfaces. Unlike other monolithic frameworks, Vue is designed from the ground up to be incrementally adoptable. The core library is focused on the view layer only, and is easy to pick up and integrate with other libraries or existing projects. On the other hand, Vue is also perfectly capable of powering sophisticated Single-Page Applications when used in combination with modern tooling and supporting libraries.</p>
+    </div>
+  </div>
+
+  <script>
+    let vm = new Vue({
+      el: '#app',
+      data: {
+        message: '<h1>Hello World🎏</h1>',
+        mytitle: 'Please click!',
+        text1: '☁🦅☁🚁☁🛸☁🐲☁',
+        text2: '🌊🚢🐳⛵🌊🚤🌊🐬',
+        text3: '🦑🐋🐟🐠🐡🦀🦐',
+        intervalId: null,
+        info: 'Type some word to find something different~',
+        btn: 'hide',
+        flag: true
+      },
+      methods: {
+        show: function() {
+          alert("Hello Vue.js!");
+        },
+        start: function() {
+          if(this.intervalId != null) return;
+          this.intervalId = setInterval( () => {
+            let head1 = this.text1.substring(0, 1);
+            let tail1 = this.text1.substring(1);
+            this.text1 = tail1 + head1;
+            let head2 = this.text2.substring(0, 1);
+            let tail2 = this.text2.substring(1);
+            this.text2 = tail2 + head2;
+            let head3 = this.text3.substring(0, 1);
+            let tail3 = this.text3.substring(1);
+            this.text3 = tail3 + head3;
+          }, 400)
+        },
+        stop: function(){
+          clearInterval(this.intervalId);
+          this.intervalId = null;
+        },
+        toggle() {
+          if(this.flag) {
+            this.flag = false;
+            this.btn = 'show';
+          } else {
+            this.flag = true;
+            this.btn = 'hide';
+          }
+        }
+      }
+    })
+  </script>
+</body>
+</html>
