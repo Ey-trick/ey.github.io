@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>尝试Vue的第二个demo</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+</head>
+<body>
+  <div id="app">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Add item</h3>
+      </div>
+      <div class="panel-body form-inline">
+        <label>
+          Id:<input type="text" class="form-control" v-model="new_id">
+        </label>
+        <label>
+          Name:<input type="text" class="form-control" v-model="new_name" @keyup.enter="add">
+        </label>        
+        <input type="button" value="Add" class="btn btn-primary" @click="add()">
+        <label>
+          Search for keywords:<input type="text" class="form-control" v-model="keywords" v-focus v-color="'crimson'">
+        </label>
+      </div>
+    </div>
+
+    <table class="table table-bordered table-hover table-striped">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Time</th>
+          <th>Operation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="item in search(keywords)" :key="item.id">
+          <td>{{item.id}}</td>
+          <td v-text="item.name"></td>
+          <td>{{ item.time | dataFormat() }}</td>
+          <td>
+            <a href="" @click.prevent="del(item.id)">Delete</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="cent5" v-center="1000">
+      <img src="./img/cent5.png" alt="picture" style="width: 100%;">
+    </div>
+  </div>
+
+  <script>
+    let vm = new Vue({
+      el: '#app',
+      data: {
+        new_id: '',
+        new_name: '',
+        keywords: '',
+        list: [
+          { id: 1, name: '张三', time: new Date() },
+          { id: 2, name: '李四', time: new Date() }
+        ]
+      },
+      methods: {
+        add() {
+          let person = { id: this.new_id, name: this.new_name, time: new Date() };
+          this.list.push(person);
+          this.new_id = this.new_name = '';
+        },
+        del(content){
+          // this.list.some( (item, i) => {
+          //   if(item.id == content) {
+          //     this.list.splice(i, 1);
+          //     return true;
+          //   }
+          // })
+          let index = this.list.findIndex( item => {
+            if(item.id == content) return true;
+          })
+          this.list.splice(index, 1);
+        },
+        search(pram) {
+          // let newList = [];
+          // this.list.forEach(item => {
+          //   if(item.name.indexOf(pram) != -1){
+          //     newList.push(item);
+          //   }
+          // });
+          // return newList;
+          return this.list.filter( item => {
+            if(item.name.includes(pram)) {
+              return item;
+            }
+          })
+        }
+      },
+      filters: {
+        dataFormat: function(dataStr, pattern = '') {
+          let date = new Date(dataStr);
+          let year = date.getFullYear();
+          let month = (date.getMonth() + 1).toString().padStart(2, '0');
+          let day = date.getDate().toString().padStart(2, '0');
+          if(pattern.toLowerCase() === 'yyyy-mm-dd') {
+            return `${year}-${month}-${day}`;
+          } else {
+            let hh = date.getHours().toString().padStart(2, '0');
+            let mm = date.getMinutes().toString().padStart(2, '0');
+            let ss = date.getSeconds().toString().padStart(2, '0');
+            return `${year}-${month}-${day} ${hh}:${mm}:${ss}`;
+          }
+        }
+      },
+      directives: {
+        'focus': {
+          inserted: function(el) {
+            el.focus();
+          }
+        },
+        'color': {
+          bind: function(el, binding) {
+            el.style.color = binding.value;
+          }
+        },
+        'center': function(el, binding) {
+          el.style.width = parseInt(binding.value) + 'px';
+          el.style.margin = "-20px auto";
+        }
+      }
+    })
+  </script>
+</body>
+</html>
